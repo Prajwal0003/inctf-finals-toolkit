@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 4140,
+      "name": "ASIS"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2210/",
+  "ctf_id": 317,
+  "weight": 65.62,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "https://ctftime.org/live/2210/",
+  "logo": "https://ctftime.org/media/events/cryptoctf.jpg",
+  "id": 2210,
+  "title": "Crypto CTF 2024",
+  "start": "2024-06-08T14:00:00+00:00",
+  "participants": 83,
+  "location": "",
+  "finish": "2024-06-09T14:00:00+00:00",
+  "description": "Crypto CTF is an online competition for hackers to test, evaluate, and expand their skills in exploiting cryptography. In this CTF, we will provide various crypto challenges that focus on modern cryptography techniques.\r\nAll crypto lovers are most welcome!\r\nCrypto CTF is a response to the longstanding complaints by CTF participants about the crypto challenges in CTF contests. In this brand-new tournament, we aim to provide crypto enthusiasts with fun and challenging pure crypto tasks that will truly test their passion for cryptography.\r\nEach task will be based on a specific cryptographic primitive or will involve a direct application of cryptography in other fields.\r\nThe organizers of these tournaments generously offer their knowledge and skills to design original Crypto tasks and challenges for similar contests.\r\nLong Live Crypto :)\r\n\r\nDiscord: https://discord.gg/RsvAJtF5Q5\r\n\r\nTwitter: https://twitter.com/Crypto_CTF",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": ".:: To be announced ::.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://cr.yp.toc.tf/",
+  "public_votable": true
+}

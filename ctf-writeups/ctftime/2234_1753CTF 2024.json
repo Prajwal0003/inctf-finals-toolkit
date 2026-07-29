@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 178287,
+      "name": "1753c"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2234/",
+  "ctf_id": 836,
+  "weight": 25.0,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "https://ctftime.org/live/2234/",
+  "logo": "https://ctftime.org/media/events/badge.png",
+  "id": 2234,
+  "title": "1753CTF 2024",
+  "start": "2024-03-15T21:00:00+00:00",
+  "participants": 125,
+  "location": "",
+  "finish": "2024-03-16T21:00:00+00:00",
+  "description": "We're absolutely thrilled to present 1753CTF 2024, a pioneering leap into our very first independent and fully online edition of the event. \r\n\r\n- Focus on easier challenges with varying difficulty levels\r\n\r\n- Fun and original challenges encouraging to learn new stuff\r\n\r\n- Event conducted entirely on Discord through our unique bot\r\n\r\n- Prize pool worth over $6000\r\n\r\n- Join Discord now and use /create_team command to be ready for the party: https://discord.com/invite/5274QUjd97\r\n\r\nGet ready for a cybersecurity adventure \u2013 we hope you'll participate!",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "We are proud to be sponsored by Hack The Box and CONFidence conference this year!\r\n\r\n1st place:\r\n\r\n- 5 x 1 year Hack The Box VIP+ plan\r\n- 5 x 3 month Hack The Box Prolabs access\r\n- 5 x Tickets to CONFidence conference 2024\r\n\r\n2nd place:\r\n\r\n- 5 x 1 Year Hack The Box VIP+ plan\r\n- 5 x Access to CONFidence 2024 recorded lectures\r\n\r\n3rd place:\r\n\r\n- 5 x 6 month Hack The Box VIP+ plan\r\n- 5 x Access to CONFidence 2024 recorded lectures",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://1753ctf.com/",
+  "public_votable": true
+}

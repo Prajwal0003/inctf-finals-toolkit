@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 49808,
+      "name": "[team Team]"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2241/",
+  "ctf_id": 457,
+  "weight": 25.0,
+  "duration": {
+    "hours": 12,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/a5000124fdb12cd1be2c435692b3a8e6.jpg",
+  "id": 2241,
+  "title": "Ugra CTF Quals 2024",
+  "start": "2024-02-10T07:00:00+00:00",
+  "participants": 87,
+  "location": "",
+  "finish": "2024-02-11T19:00:00+00:00",
+  "description": "Ugra CTF Quals 2024 is an open information security competition for beginners. It is a 36-hour online event. Everybody is welcome to participate.\r\n\r\nThis CTF is organized by [team Team] in a joint effort with Ugra Research Institute of Information Technologies and Information Technologies and Digital Development Department of the Khanty-Mansiysk Autonomous Okrug \u2014 Ugra.\r\n\r\nTeams of high school students and others are playing in separate scoreboards, but they will be merged upon uploading to CTFtime.\r\n\r\nThe official language of Ugra CTF is Russian, but you are welcome to participate even if you don\u2019t speak it. All\u00a0challenges are available both in\u00a0Russian and in\u00a0English.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Members of the winning high school teams will be invited to Ugra CTF School 2024, an onsite individual CTF competition. It will be held on several sites across Russia on March 30, 2024.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://2024.ugractf.ru/",
+  "public_votable": true
+}

@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 275972,
+      "name": "TCM Security"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2201/",
+  "ctf_id": 1029,
+  "weight": 0.0,
+  "duration": {
+    "hours": 8,
+    "days": 0
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/tcm-logo-small.png",
+  "id": 2201,
+  "title": "1st Annual TCM Invitational CTF",
+  "start": "2023-12-16T15:00:00+00:00",
+  "participants": 24,
+  "location": "",
+  "finish": "2023-12-16T23:00:00+00:00",
+  "description": "As a gift to our students, we're excited to announce our 1st annual CTF specifically for TCM Academy All-Access Members Only! This event is put on by MetaCTF with a mix of challenges created by them as well as the TCM staff. Participants can compete individually or in teams of up to 4.\r\n\r\nWhile there will be plenty of hard problems for those looking for a challenge, our challenges are designed to help learn some new tools, techniques and skills. Problems will cover topics such as web exploitation, cryptography, binary exploitation, reverse engineering, forensics, and OSINT.\r\n\r\nThroughout the CTF, participants can interact with other players and the staff in our Discord Server.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "\u2022\t1st - $1000 to the team + one TCM exam voucher per member... and forever known as the 1st ever winners of the TCM Invit. CTF!\r\n\u2022\t2nd - $500 to the team + one 6-month sub per member\r\n\u2022\t3rd - $250 to the team + one 3-month sub per member\r\n\u2022\t10 misc vouchers rewarded randomly from pool of all CTF participants. So be sure to play, because ANYONE can win!",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://www.tcm.rocks/TCM2023CTF",
+  "public_votable": false
+}

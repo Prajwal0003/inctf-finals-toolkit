@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 269281,
+      "name": "Beavers0"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2218/",
+  "ctf_id": 1041,
+  "weight": 0,
+  "duration": {
+    "hours": 4,
+    "days": 15
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/logo_25_2.png",
+  "id": 2218,
+  "title": "New Year CTF 2024",
+  "start": "2023-12-30T17:00:00+00:00",
+  "participants": 0,
+  "location": "",
+  "finish": "2024-01-14T21:00:00+00:00",
+  "description": "We are students of the Department of System Programming and Computer Security of Grodno State University, Grodno, Belarus. This is a competition for beginners, students and everyone. We hope that all participants will be able to use their skills and make good use of the cold winter time.\r\n\r\nWe have been holding \u201cNew Year\u2019s Quest\u201d and other CTF competitions for almost 10 years. This time we wanted to attract not only Belarusian, but also international participants and introduce them to our country.\r\nWe plan to conduct CTF for almost two weeks - from January 3 to January 14). Due to the fact that the Republic of Belarus is located on the border of Western and Slavic civilization. For this reason, in Belarus there are 2 holidays called Christmas (December 25 and January 7). There are also 2 New Year holidays - January 1 and 13.\r\n\r\nAt the same time, this is the session time. And we believe that such a period will allow students to choose the most convenient time to participate. Without giving up exams and studies.\r\n\r\nTeam participation. Team of 1-4 people.\r\nThe tasks relate to different areas - beginner, crypto, forensics, misc, OSINT, ppc, pwn, rev, web. They will be of interest to beginners, students and everyone else.\r\n\r\nTasks will be added on January 03 and 08. Be careful !\r\n\r\nThe sponsors of the competition are IT companies in our city.\r\n",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Unfortunately, we do not have a huge prize fund. Participants from Belarus will receive prizes from IT companies. We promise everyone professional respect, pride and satisfaction from solving interesting problems and knowledge in the field of cybersecurity.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "http://ctf-spcs.mf.grsu.by/",
+  "public_votable": false
+}

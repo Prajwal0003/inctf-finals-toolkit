@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 168552,
+      "name": "CSIRT-UTPL"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2202/",
+  "ctf_id": 653,
+  "weight": 6.67,
+  "duration": {
+    "hours": 23,
+    "days": 0
+  },
+  "live_feed": "",
+  "logo": "",
+  "id": 2202,
+  "title": "CTF Internacional MetaRed 2023 - 6th STAGE",
+  "start": "2023-12-01T19:00:00+00:00",
+  "participants": 0,
+  "location": "",
+  "finish": "2023-12-02T18:59:00+00:00",
+  "description": "With the support of Universidad Tecnol\u00f3gica Centroamericana - UNITEC de Honduras, MetaRed TIC Centroam\u00e9rica y Caribe is responsible for organizing this, the 6th stage of the MetaRed International CTF 2023.  \r\n\r\nParticipation is open to anyone, but only participants belonging to a MetaRed TIC Higher Education Institution (HEI) will receive a financial prize. Participants must prove in their registration that they belong to a HEI, by means of an institutional email.\r\n\r\nAll information concerning 6th stage of the CTF may be obtained through the different web tabs.\r\n\r\nGeneral information concerning the 2023 International MetaRed CTF: http://eventos.metared.org/go/CTFMetaRedTIC2023",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "* The Cash value of the prizes reflected as follows shall take the form of gift tokens for online shops in the countries of the respective winning teams. \r\n\r\nThere will be only one category: MetaRed TIC Global Universities Competition.\r\n\r\nMETARED TIC GLOBAL UNIVESITY COMPETITION AWARDS\r\n\r\n(It is a requirement to belong to a university forming part of the MetaRed network)\r\n\r\nA prize for the best competing team (accumulation of all stages)\r\n1 (one) prize to the value of 1.000 U$D \r\nA prize for the best team from each country with the highest accumulated score for all the stages \r\n10 (ten) prizes each to the value of 600 U$D\r\nOne prize per stage for the best team of the stage\r\n6 (six) prizes each to the value of 300 U$D\r\nOne prize per country awarded to the university of the winning team\r\n10 (ten) prizes: Diploma and interview in the International MetaRed magazine\r\nPrizes are accumulative for MetaRed teams.\r\n\r\nPrizes are awarded to the leader of the team.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctfhn.unitec.edu/",
+  "public_votable": true
+}

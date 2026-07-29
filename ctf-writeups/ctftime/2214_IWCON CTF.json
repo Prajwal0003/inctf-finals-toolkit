@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 277281,
+      "name": "IWCON"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2214/",
+  "ctf_id": 1042,
+  "weight": 0.0,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "",
+  "id": 2214,
+  "title": "IWCON CTF",
+  "start": "2023-12-14T10:26:53+00:00",
+  "participants": 0,
+  "location": "",
+  "finish": "2023-12-15T10:26:53+00:00",
+  "description": "",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Top team gets **1x Learn Fundamentals Annual subscription** (worth $799/year) from OffSec\r\n\r\nThe next 2 teams get **1x Proving Grounds Play & Practice Annual Subscription** (worth $199/year) each from OffSec\r\n\r\nAll members of top 3 teams get Pentester Lab 1 month vouchers.\r\n\r\nAll-access passes to IWCON 2023 for the top 50 teams.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://iwcon.live/ctf",
+  "public_votable": false
+}

@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 173872,
+      "name": "CyberVT"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2237/",
+  "ctf_id": 884,
+  "weight": 0.0,
+  "duration": {
+    "hours": 7,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/default_background_removed.png",
+  "id": 2237,
+  "title": "SummitCTF 2024",
+  "start": "2024-03-30T13:00:00+00:00",
+  "participants": 40,
+  "location": "Blacksburg, VA",
+  "finish": "2024-03-31T20:00:00+00:00",
+  "description": "SummitCTF is an annual Capture the Flag (CTF) competition hosted by the Cybersecurity Club at Virginia Tech (CyberVT). The next competition will have two competition tiers: One for experienced students and one for beginners.\r\nThe main difference between the two tiers is that the lab network for experienced players will have Windows Defender active and blue teamers roaming around. There are prizes for both tiers but experienced tier prizes will be better.\r\nThe competition will officially start on 3/30/2024 and is in-person only.",
+  "format": "Hack quest",
+  "is_votable_now": false,
+  "prizes": "4 CompTIA Exam Vouchers and more...",
+  "format_id": 3,
+  "onsite": true,
+  "restrictions": "Open",
+  "url": "https://summitctf.org/",
+  "public_votable": false
+}

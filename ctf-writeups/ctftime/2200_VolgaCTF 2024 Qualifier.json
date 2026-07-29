@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 27094,
+      "name": "VolgaCTF.org"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2200/",
+  "ctf_id": 52,
+  "weight": 35.91,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/logo-social-yellow_14.png",
+  "id": 2200,
+  "title": "VolgaCTF 2024 Qualifier",
+  "start": "2024-03-30T15:00:00+00:00",
+  "participants": 240,
+  "location": "",
+  "finish": "2024-03-31T15:00:00+00:00",
+  "description": "VolgaCTF is an international interuniversity cybersecurity competition organised by a group of IT enthusiasts in collaboration with the Institute of Informatics, Mathematics and Electronics of Samara University.\r\n\r\nVolgaCTF 2024 Qualifier is an online competition. Top teams will be invited to participate in VolgaCTF 2024 Final, which will be held in Samara, Russia on Sep 16-20th.\r\n\r\nSign-up will be opened on March 4th.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://q.2024.volgactf.ru/",
+  "public_votable": true
+}

@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 87727,
+      "name": "Cyber@UC"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2208/",
+  "ctf_id": 1032,
+  "weight": 0,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/bearcatlogo-cyberatuc.png",
+  "id": 2208,
+  "title": "Bearcat CTF 2024",
+  "start": "2024-02-03T19:00:00+00:00",
+  "participants": 46,
+  "location": "United States, Cincinnati",
+  "finish": "2024-02-04T19:00:00+00:00",
+  "description": "Welcome to Cyber@UC's BearcatCTF 2024! This is Cyber@UC's inaugural year running our own dedicated CTF competition and we are very excited for what is planned.\r\n\r\nStart: February 3rd at 2 PM EST\r\nEnd: February 4th at 2 PM EST\r\n\r\nSponsors\r\n\r\nPlatinum Tier\r\n- Ohio Cyber Range Institute\r\n\r\nSilver Tier\r\n- Trail of Bits\r\n- Cryptic Vector\r\n\r\nBronze Tier\r\n- HackTheBox\r\n\r\nLocation Sponsor\r\n- 1819 Innovation Hub\r\n\r\n",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "None",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Academic",
+  "url": "https://www.bearcatctf.io/",
+  "public_votable": false
+}

@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 86069,
+      "name": "Wargames.MY"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2203/",
+  "ctf_id": 1038,
+  "weight": 0.0,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/wgmy2023_logo.png",
+  "id": 2203,
+  "title": "Wargames.MY CTF 2023",
+  "start": "2023-12-15T16:00:00+00:00",
+  "participants": 24,
+  "location": "",
+  "finish": "2023-12-16T16:00:00+00:00",
+  "description": "Wargames.MY CTF is back for 2023!  As usual, the 24-hours Jeopardy CTF will be running the whole day on a December Saturday (GMT+8), max 3 players per team.\r\n\r\nOfficial website: https://wargames.my\r\nDiscord: https://discord.com/invite/6Q95FjHCcM\r\n\r\nCategories: Web, Reverse, Crypto, Forensics, Pwn, Ppc, Misc\r\n\r\nHuge thanks to our sponsors for making this happen:\r\n- NetByteSec: https://www.netbytesec.com/\r\n- ASK-Pentest: https://www.ask-pentest.com/\r\n- Fenrir Solution: https://fenrirsolution.com/\r\n- REHACK: https://www.rehack.xyz/\r\n\r\nCTF Ended, feel free to submit write-ups.\r\n",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "A total prize pool of 6000 MYR split between the top 3 of each category. Plus an array of limited edition swags!\r\n\r\nSwags include: T-shirt, Medal, Enamel Badge, Lanyard, Mousepad, and Stickers!\r\n\r\n*Only Malaysia citizens are eligible for the cash prizes, but we will still ship the exclusive swags to you :D",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://pro2023.wargames.my/",
+  "public_votable": false
+}

@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 278504,
+      "name": "ISSesssions"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2221/",
+  "ctf_id": 1056,
+  "weight": 0.0,
+  "duration": {
+    "hours": 8,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/unnamed_2.png",
+  "id": 2221,
+  "title": "ISSessions Espionage CTF",
+  "start": "2024-01-27T14:00:00+00:00",
+  "participants": 21,
+  "location": "Canada, Toronto",
+  "finish": "2024-01-28T22:00:00+00:00",
+  "description": "The CTF will be held on January 27th to 28th, 2024, from 9:00AM to 5:00PM EST. The CTF will be held in person as well as hosted on the ISSessions Discord server https://discord.gg/WRdF8seaz7 .  Test your problem-solving and teamwork skills with a variety of challenges including web, forensics, crypto, and more. Perfect for hackers, developers, and digital enthusiasts ready for an espionage-themed adventure. The CTF is designed to be beginner-friendly while still offering more difficult challenges for advanced players. We will be giving out prizes to the top 3 teams. The prizes will be announced closer to the CTF date. We will also be giving out prizes for the best writeups. \r\n\r\nThe CTF is only available to students currently attending a Canadian post-secondary institution. \r\n\r\nISSessions is a student run cybersecurity club at Sheridan College. We couldn't do these events without the help of our sponsors! \r\nTrend Micro, Parabellyx Cybersecurity, more to come!\r\n\r\n\r\n",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "TBA",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.issessions.ca/",
+  "public_votable": false
+}

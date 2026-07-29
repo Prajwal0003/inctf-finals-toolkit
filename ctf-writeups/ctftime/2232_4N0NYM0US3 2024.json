@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 231105,
+      "name": "WyteHat"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2232/",
+  "ctf_id": 961,
+  "weight": 25.0,
+  "duration": {
+    "hours": 0,
+    "days": 0
+  },
+  "live_feed": "",
+  "logo": "",
+  "id": 2232,
+  "title": "4N0NYM0US3 2024",
+  "start": "2024-01-21T05:04:43+00:00",
+  "participants": 0,
+  "location": "",
+  "finish": "2024-01-21T05:04:43+00:00",
+  "description": "",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "http://ctf.appinprogress.com/",
+  "public_votable": false
+}

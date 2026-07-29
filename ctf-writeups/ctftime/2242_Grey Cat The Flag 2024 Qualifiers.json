@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 16740,
+      "name": "NUSGreyhats"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2242/",
+  "ctf_id": 778,
+  "weight": 22.46,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "",
+  "id": 2242,
+  "title": "Grey Cat The Flag 2024 Qualifiers",
+  "start": "2024-04-20T04:00:00+00:00",
+  "participants": 107,
+  "location": "",
+  "finish": "2024-04-21T04:00:00+00:00",
+  "description": "Grey Cat The Flag is a CTF hosted by NUS Greyhats in collaboration with National Cybersecurity R&D Labs.\r\n\r\nWe will host the onsite finals in Singapore, to the top 20 local teams from the qualifiers will be invited.\r\n\r\nA team can be considered a local team only if all its members participating in this CTF event are Singapore Citizens, Permanent Residents (PR), or Long-term Pass holders.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.nusgreyhats.org/",
+  "public_votable": true
+}

@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 166729,
+      "name": "les amateurs de la competition ctf"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2226/",
+  "ctf_id": 936,
+  "weight": 24.54,
+  "duration": {
+    "hours": 13,
+    "days": 4
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/2d6bd602-ecce-47e6-8f53-b352af222287.915ceb9574bb9759b4dd16bf8a744d25_1.jpeg",
+  "id": 2226,
+  "title": "AmateursCTF 2024",
+  "start": "2024-04-05T14:00:00+00:00",
+  "participants": 248,
+  "location": "",
+  "finish": "2024-04-10T03:00:00+00:00",
+  "description": "Les Amateurs's second CTF competition! Problems are targeted for high schoolers, and will range from beginner-friendly to kernel pwn.\r\n\r\nJoin our discord for more details: discord.gg/gCX22asy65\r\n\r\nEmail: contact@amateurs.team\r\n\r\nAmateursCTF will also serve as a junior qualifier for DiceCTF!",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Prizes (tenatative):\r\n\r\nHigh School Division:\r\n\r\n1st - $500 + stickers + DiceCTF Junior Qualifier!!\r\n2nd - $300 + stickers\r\n3rd - $200 + stickers\r\n\r\nWriteup Prize Pool: \r\n$250",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.amateurs.team/",
+  "public_votable": true
+}

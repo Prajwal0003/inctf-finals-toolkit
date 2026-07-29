@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 276542,
+      "name": "mrwebsecure"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2204/",
+  "ctf_id": 1036,
+  "weight": 0.0,
+  "duration": {
+    "hours": 10,
+    "days": 0
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/instagram.jpeg",
+  "id": 2204,
+  "title": "HACKOLINE",
+  "start": "2023-12-10T09:00:00+00:00",
+  "participants": 2,
+  "location": "Kohinoor Private Limited, Kohinoor Continental, Andheri - Kurla Rd, Andheri (E), Mumbai, Maharashtra, India-400059",
+  "finish": "2023-12-10T19:00:00+00:00",
+  "description": "- Chance to be interviewed by more than 5 companies in a day! \r\n- Unleash your skills in a thrilling Recruitment Drive.\r\n- Conquer the challenges of Capture The Flag.\r\n- Opportunities to connect with industry experts.\r\n- CTF - you have to find two flags and submit it along with the report .",
+  "format": "Attack-Defense",
+  "is_votable_now": false,
+  "prizes": "CTF WINNER PERKS:\r\n- \u20b91 Lakh cash prize \r\n- Trophy \r\n- \u20b910k & \u20b95k vouchers \r\n- Brochure \r\n- Laptop sticker \u2705\r\n- Adaptor \u2705\r\n- Sticker \u2705\r\n- Hoodie \u2705\r\n- And Many More Exciting Goodies\u2728\r\n\r\n PERKS FOR EVERY PARTICIPANT:\r\n- Certificate \r\n- Vouchers worth \u20b910k & \u20b93k \r\n- Stickers \u2705\r\n- T-shirt \r\n- Exciting Goodies \r\n- Special Gift \r\n- Delicious Meal \r\n- Get insights from Field Experts \r\n- Networking with Security Experts\r\n- Chance to meet National Level Bug Hunters & Hackers\r\n- And Many More \u2728",
+  "format_id": 2,
+  "onsite": true,
+  "restrictions": "Open",
+  "url": "https://mrwebx.com/event/#/home",
+  "public_votable": true
+}

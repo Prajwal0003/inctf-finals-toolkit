@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 199492,
+      "name": "cursed"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2239/",
+  "ctf_id": 887,
+  "weight": 19.5,
+  "duration": {
+    "hours": 0,
+    "days": 2
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/Screenshot_2024-01-23_at_11.45.46_AM.png",
+  "id": 2239,
+  "title": "CursedCTF 2024 Quals",
+  "start": "2024-03-30T00:00:00+00:00",
+  "participants": 171,
+  "location": "",
+  "finish": "2024-04-01T00:00:00+00:00",
+  "description": "Experience the thrill of the extraordinary at CursedCTF, the premier cybersecurity event where the impossible becomes possible. Proudly sponsored by industry leaders Google, Zellic, and Rondo, this event is a melting pot of the brightest minds in cybersecurity, challenging them in a realm where only the most skilled can triumph.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "There will be prizes.\r\n\r\nWinners will be invited to an in-person CursedCTF finals",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://cursedc.tf/",
+  "public_votable": true
+}

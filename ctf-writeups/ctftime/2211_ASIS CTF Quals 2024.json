@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 4140,
+      "name": "ASIS"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2211/",
+  "ctf_id": 55,
+  "weight": 66.25,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "https://ctftime.org/live/2211/",
+  "logo": "https://ctftime.org/media/events/asisctf.jpg",
+  "id": 2211,
+  "title": "ASIS CTF Quals 2024",
+  "start": "2024-09-21T14:00:00+00:00",
+  "participants": 114,
+  "location": "",
+  "finish": "2024-09-22T14:00:00+00:00",
+  "description": "ASIS CTF Quals 2024",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://asisctf.com/",
+  "public_votable": true
+}

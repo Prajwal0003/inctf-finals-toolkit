@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 160305,
+      "name": "CYB3R_T3N4CI0US"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2213/",
+  "ctf_id": 743,
+  "weight": 9.64,
+  "duration": {
+    "hours": 9,
+    "days": 0
+  },
+  "live_feed": "",
+  "logo": "",
+  "id": 2213,
+  "title": "ESCAPE CTF Final",
+  "start": "2024-02-03T12:00:00+00:00",
+  "participants": 51,
+  "location": "",
+  "finish": "2024-02-03T21:30:00+00:00",
+  "description": "Sponsor\r\n- hex-rays\r\n- Wolfram\r\n- Burp Bounty\r\n- Hackrocks\r\n- Pentesterlab\r\n- OtterSec\r\n- OffSec",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "TBD",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.t3n4ci0us.kr/",
+  "public_votable": true
+}

@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 83435,
+      "name": "C4T BuT S4D"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2249/",
+  "ctf_id": 436,
+  "weight": 24.93,
+  "duration": {
+    "hours": 8,
+    "days": 0
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/Frame_13734128.png",
+  "id": 2249,
+  "title": "GoldCTF 2024",
+  "start": "2024-02-10T07:00:00+00:00",
+  "participants": 33,
+  "location": "",
+  "finish": "2024-02-10T15:00:00+00:00",
+  "description": "Online open-to-all Attack-Defence for gold diggers willing to spend their lifes ingloriously hitting stones with pickaxe 79 PROTONS COMBINED EDITION CTF\r\n\r\nEverything will be cloud-hosted using Wireguard to access the game network.\r\n\r\nRegistration is available here: https://register.cbsctf.live/ .\r\nAll information about game will be posted in telegram channel https://t.me/cbsctf_c .\r\n\r\nThe main competition chat is https://t.me/cbsctf. It's mostly Russian-speaking, but feel free to use any language or DM admins in case of any issues. There's also an English-speaking chat here: https://t.me/cbsctf_en.",
+  "format": "Attack-Defense",
+  "is_votable_now": false,
+  "prizes": "Pain and Glory for all participants",
+  "format_id": 2,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://register.cbsctf.live/",
+  "public_votable": true
+}

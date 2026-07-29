@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 284,
+      "name": "Plaid Parliament of Pwning"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2245/",
+  "ctf_id": 10,
+  "weight": 95.19,
+  "duration": {
+    "hours": 0,
+    "days": 2
+  },
+  "live_feed": "",
+  "logo": "",
+  "id": 2245,
+  "title": "PlaidCTF 2024",
+  "start": "2024-04-12T21:00:00+00:00",
+  "participants": 183,
+  "location": "",
+  "finish": "2024-04-14T21:00:00+00:00",
+  "description": "Plaid CTF :: Hosted by Plaid Parliament of Pwning\r\n\r\nApril 12 21:00 UTC - April 14 21:00 UTC",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "TBD",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://plaidctf.com/",
+  "public_votable": true
+}

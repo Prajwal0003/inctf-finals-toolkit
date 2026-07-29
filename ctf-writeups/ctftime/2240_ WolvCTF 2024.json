@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 83621,
+      "name": "w01verines"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2240/",
+  "ctf_id": 766,
+  "weight": 35.25,
+  "duration": {
+    "hours": 0,
+    "days": 2
+  },
+  "live_feed": "https://ctftime.org/live/2240/",
+  "logo": "",
+  "id": 2240,
+  "title": " WolvCTF 2024",
+  "start": "2024-03-15T23:00:00+00:00",
+  "participants": 119,
+  "location": "",
+  "finish": "2024-03-17T23:00:00+00:00",
+  "description": "Our challenges range from beginner to hard in difficulty. Our esteemed members have worked tirelessly to bring new and stimulating CTF challenges to pose varying levels of difficulty and topic (RE, binary exploit, web exploit, cryptography, forensics, osint, misc.). \r\n\r\nThere are two divisions, Open and University of Michigan students. No team limit sizes.\r\n\r\nThank you to our gracious sponsors!\r\nPlatinum\r\nICR (https://icr-team.com/)\r\nHackTheBox (https://www.hackthebox.com/)\r\n\r\nGold\r\nCaesar Creek Software (https://www.cc-sw.com/)\r\nTrail of Bits (https://www.trailofbits.com/)\r\nOtterSec (https://osec.io/)\r\n\r\nSilver\r\nBattelle (https://www.battelle.org/)\r\n\r\nDiscord:\r\nhttps://discord.gg/skDeDyGMNX",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Open Division:\r\n- 1st place $500, 2x HTB VIP+ 1 year, 1x HTB Prolab 3 months, 1x HTB VIP+ 6 months\r\n- 2nd place $250, 1x HTB VIP+ 1 year, 1x HTB Prolab 3 months, 1x HTB VIP+ 6 months\r\n- 3rd place $100, 1x HTB VIP+ 1 year, 1x HTB Prolab 3 months\r\n- 2x Writeup Prize: $50\r\n\r\nUofM Division:\r\n- 1st place $250, 2x HTB VIP+ 1 year,  1x Prolab 3 months, 1x HTB VIP+ 6 months\r\n- 2nd place $150, 1x HTB VIP+ 1 year, 1x Prolab 3 months, 1x HTB VIP+ 6 months\r\n- 3rd place $100, 1x HTB VIP+ 1 year, 1x HTB VIP+ 6month,\r\n- 2x Writeup Prize: $50",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://wolvctf.io/",
+  "public_votable": true
+}

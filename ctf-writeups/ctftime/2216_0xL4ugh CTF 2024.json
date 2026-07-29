@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 132776,
+      "name": "0xL4ugh"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2216/",
+  "ctf_id": 579,
+  "weight": 25.0,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/logo_94.png",
+  "id": 2216,
+  "title": "0xL4ugh CTF 2024",
+  "start": "2024-02-09T13:00:00+00:00",
+  "participants": 239,
+  "location": "",
+  "finish": "2024-02-10T13:00:00+00:00",
+  "description": "0xL4ugh CTF 24 (Third Version) we tried to make it hard, useful and funny as much we could, most of challenges this year are based on real life cases and researches. \r\nStay Tunned!\r\n\r\ncategories :\r\n- Web\r\n- DFIR\r\n- Reverse\r\n- Crypto\r\n- Pwn\r\n- Misc\r\n- Osint\r\nRegistration link will be dropped later.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Overall Winners:\r\n\r\n1st Place:\r\n        $ 200 USD\r\n\t5 VIP+ vouchers for Let's Defend (2 Months)\r\n\t1x PG access for 1-Year OffSec's 1st Place Award\r\n\r\n2nd Place:\r\n\r\n\t5 VIP+ vouchers for Let's Defend (1 Month)\r\n\t1x PG access for 3-Months OffSec's 2nd Place Award\r\n\r\n3rd Place:\r\n\r\n\t5 VIP+ vouchers for Let's Defend (1 Month)\r\n\tOffSec's 3rd Place Award\r\n\r\nFirst Bloods on Forensics:\r\n\r\n\t1st Place: 3 Months Pro Subscription on Cyber Defenders\r\n\t2nd Place: 2 Months Pro Subscription on Cyber Defenders\r\n\t3rd Place: 1 Month Pro Subscription on Cyber Defenders\r\n\r\nSpecial Prizes:\r\n\r\nTop First Blood Player on the Web:\r\n\tLearn Fundamentals Subscription from OffSec\r\n\r\nTop Egyptian Team:\r\n\t$100USD",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf24.0xl4ugh.com/",
+  "public_votable": true
+}

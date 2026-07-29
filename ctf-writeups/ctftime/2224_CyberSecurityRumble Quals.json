@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 48677,
+      "name": "RedRocket"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2224/",
+  "ctf_id": 159,
+  "weight": 100.0,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "",
+  "id": 2224,
+  "title": "CyberSecurityRumble Quals",
+  "start": "2024-05-11T13:00:00+00:00",
+  "participants": 104,
+  "location": "",
+  "finish": "2024-05-12T13:00:00+00:00",
+  "description": "The CyberSecurityRumble Germany is back, this year with an even bigger final as part of the Deutsche Hackingmeisterschaft!\r\n\r\nThe CSR this year will have 24h online quals.\r\n\r\nThe Quals are a Jeopardy style CTF.\r\n\r\n**Max Team size is 6 Hackers!**\r\nEverybody is allowed to participate online.\r\n\r\nAgain we'll have tasks in all categories: pwn, rev, crypto, web, ... from beginner friendly to 31337!\r\n\r\nThe onsite final will be in Bonn, Germany. The TOP 8 student teams from Germany will be invited to compete with the 24 best participants of the CSCG in the finals.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "German student teams:\r\n\r\n* TOP 8 teams will qualify for the Deutsche Hackingmeisterschaft onsite in Bonn.\r\n* The winner team at the finals will get a fully paid trip to DEFCON Las Vegas.\r\n\r\nAll teams:\r\n\r\nTBA",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://quals.rumble.host/",
+  "public_votable": true
+}

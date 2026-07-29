@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 169557,
+      "name": "Project Sekai"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2243/",
+  "ctf_id": 769,
+  "weight": 36.96,
+  "duration": {
+    "hours": 0,
+    "days": 2
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/sekai2_SEKAI_CTF_Square_Black_BG.r_1_1.png",
+  "id": 2243,
+  "title": "SekaiCTF 2024",
+  "start": "2024-08-23T16:00:00+00:00",
+  "participants": 355,
+  "location": "",
+  "finish": "2024-08-25T16:00:00+00:00",
+  "description": "SekaiCTF is back for its third iteration! This year\u2019s competition will feature various categories designed to test participants\u2019 skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players\u2014however, there will still be beginner-friendly challenges to welcome players on the newer side.\r\n\r\nJoin the Discord to learn more: https://discord.gg/6gk7jhCgGX\r\n\r\n[+] Categories\r\n\u30fbWeb, Cryptography, Pwn, Reverse Engineering, Miscellaneous, Blockchain, and Programming (PPC)\r\n\r\n[+] Prize Pool\r\n\u30fbUSD$3,000 cash and prizes valued over $10,000\r\n\u30fbThe Winner of SekaiCTF 2024 will qualify for the 9th XCTF Finals in China: https://adworld.xctf.org.cn/\r\n\r\n[+] Sponsors\r\n\u30fbOtterSec (https://osec.io/)\r\n\u30fbTrail of Bits (https://www.trailofbits.com/)\r\n\u30fbSec3 (https://www.sec3.dev/)\r\n\u30fbVector 35 / Binary Ninja (https://binary.ninja/)\r\n\u30fbHack The Box (https://www.hackthebox.com/)\r\n\u30fbOffensive Security (https://www.offensive-security.com/)\r\n\r\n[+] Partners\r\n\u30fbGoogle Cloud (https://cloud.google.com/)\r\n\u30fbXCTF League (https://adworld.xctf.org.cn/)",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "[+] 1st Place (Worth $4,500)\r\n\u30fb1,024 USD\r\n\u30fb5x Hack The Box 1-year VIP+ and 5x 3-month Prolab Bundle\r\n\u30fb3x Binary Ninja Personal License\r\n\u30fb1x Offensive Security Learn Fundamentals\r\n\u30fbQualify for the 9th XCTF Finals in China\r\n\r\n[+] 2nd Place (Worth $3,000)\r\n\u30fb512 USD\r\n\u30fb5x Hack The Box 6-month VIP and 5x 3-month Prolab Bundle\r\n\u30fb2x Binary Ninja Personal License\r\n\u30fb1x Offensive Security Learn Fundamentals\r\n\r\n[+] 3rd Place (Worth $1,300)\r\n\u30fb256 USD\r\n\u30fb5x Hack The Box 6-month VIP+\r\n\u30fb1x Binary Ninja Personal License\r\n\u30fb1x Offensive Security Annual PG Subscription\r\n\r\n[+] 4th Place\r\n\u30fb150 USD\r\n\r\n[+] 5th Place\r\n\u30fb100 USD\r\n\r\n[+] Each of the four blockchain challenges has the following bounty:\r\n\u30fb1st blood: 100 USDT\r\n\u30fb2nd blood: 50 USDT\r\n\u30fb3rd blood: 30 USDT\r\n\r\n[+] Writeup prizes\r\n\u30fb8x 50 USD (2 reserved for blockchain challenges)\r\n\u30fb3x 6-month VIP+ from Hack The Box\r\n\u30fb1x Binary Ninja Personal License using Binja for writeup\r\n\u30fb1x Offensive Security 3-month PG Subscription",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.sekai.team/",
+  "public_votable": true
+}

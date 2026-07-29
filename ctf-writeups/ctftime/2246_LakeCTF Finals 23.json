@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 53791,
+      "name": "polygl0ts"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2246/",
+  "ctf_id": 818,
+  "weight": 24.0,
+  "duration": {
+    "hours": 8,
+    "days": 0
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/lakeCTFLogo.png",
+  "id": 2246,
+  "title": "LakeCTF Finals 23",
+  "start": "2024-05-03T08:00:00+00:00",
+  "participants": 21,
+  "location": "EPFL Lausanne",
+  "finish": "2024-05-03T16:00:00+00:00",
+  "description": "The 9 qualified teams from LakeCTF Quals 23 as well as the winning team of Insomni'hack's CTF (student bracket) are invited to play the finals at EPFL.\r\n\r\n",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "1st place: 1 Life sized psyduck plushie + 8 Led shoes\r\n2nd place: 8 POC||GTFO books and 8 blinkenrocket kits\r\n3rd place: 8 Amazon Gift cards and 8 Arch linux live CD-ROM\r\n\r\nAll players from the top three teams will also receive a challenge coin each.",
+  "format_id": 1,
+  "onsite": true,
+  "restrictions": "Open",
+  "url": "https://lakectf.epfl.ch/",
+  "public_votable": true
+}

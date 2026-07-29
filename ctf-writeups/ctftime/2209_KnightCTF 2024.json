@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 141739,
+      "name": "Knight Squad"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2209/",
+  "ctf_id": 721,
+  "weight": 6.65,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/KnightCTF.png",
+  "id": 2209,
+  "title": "KnightCTF 2024",
+  "start": "2024-01-20T15:00:00+00:00",
+  "participants": 163,
+  "location": "",
+  "finish": "2024-01-21T15:00:00+00:00",
+  "description": "KnightCTF 2024 is a jeopardy CTF competition for Cyber \u200b\u200bSecurity professionals and students or those who are interested in security. There will be challenges in various categories like PWN, Reversing, Web, Cryptography etc.\r\n",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Prizes for Champion Team\r\n[+] $200\r\n[+] Parrot CTFs Vouchers\r\n[+] LetsDefend Vouchers \r\n[+] BurpBounty Vouchers\r\n\r\nPrizes for Second and Third Team\r\n[+] Parrot CTFs Vouchers\r\n[+] LetsDefend Vouchers \r\n[+] BurpBounty Vouchers",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://knightctf.com/",
+  "public_votable": true
+}

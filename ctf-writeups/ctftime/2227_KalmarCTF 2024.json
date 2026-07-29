@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 114856,
+      "name": "kalmarunionen"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2227/",
+  "ctf_id": 813,
+  "weight": 24.21,
+  "duration": {
+    "hours": 0,
+    "days": 2
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/logo_square_756x756.png",
+  "id": 2227,
+  "title": "KalmarCTF 2024",
+  "start": "2024-03-15T17:00:00+00:00",
+  "participants": 169,
+  "location": "",
+  "finish": "2024-03-17T17:00:00+00:00",
+  "description": "Welcome to KalmarCTF 2024, brought to you by the Kalmarunionen\r\n\r\nThe competition will take place on Fri, 15 Mar. 2024, 17:00 UTC to Sun, 17 Mar. 2024, 17:00 UTC.\r\n\r\nThis year's competition will feature a variety of categories including pwn, crypto, web, rev, and of course miscgang will deliver.\r\n\r\nMore information coming soon!",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "First place: 3 IDA PRO named licenses* with 2 decompilers\r\nSecond place: 2 IDA PRO licenses* with 2 decompilers\r\nThird place: 1 IDA PRO license* with 2 decompilers\r\n\r\n*All licenses are perpetual with one year of support and upgrades included.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "http://KalmarC.TF/",
+  "public_votable": true
+}

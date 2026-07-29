@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 175828,
+      "name": "View Source"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2248/",
+  "ctf_id": 785,
+  "weight": 34.0,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/vsctf_2024_2x.png",
+  "id": 2248,
+  "title": "vsCTF 2024",
+  "start": "2024-06-14T16:00:00+00:00",
+  "participants": 279,
+  "location": "",
+  "finish": "2024-06-15T16:00:00+00:00",
+  "description": "** POSTPONED TO JUNE 14 **\r\n\r\nView Source's 3rd CTF! Challenge difficulty ranges from beginner-friendly to hard.\r\n\r\nHigh School division winners qualify for DiceCTF finals!\r\n\r\nInfra sponsored by goo.gle/ctfsponsorship\r\n\r\nJoin our Discord: https://discord.gg/mVAzUJrpyf",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "TBD",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.viewsource.me/",
+  "public_votable": true
+}

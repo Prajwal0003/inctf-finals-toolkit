@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 139261,
+      "name": "UofTCTF"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2219/",
+  "ctf_id": 1052,
+  "weight": 23.9,
+  "duration": {
+    "hours": 11,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/ctf_logo_1.png",
+  "id": 2219,
+  "title": "UofTCTF 2024",
+  "start": "2024-01-13T17:00:00+00:00",
+  "participants": 206,
+  "location": "",
+  "finish": "2024-01-15T04:59:00+00:00",
+  "description": "The University of Toronto is hosting its second inaugural Capture the Flag competition. It will be jeopardy-style, held online with categories such as Web, Pwn, Rev, Crypto, Misc, and more! There will be plenty of challenges for both beginner and experienced players. The team size is limited to 4 players per team.\r\n\r\nThis competition is organized by UofTCTF, GDSC (UTM), and MCSS (UTM) and sponsored by AON, UofT Department of Computer Science, UofT Information Security and Enterprise Architecture, LetsDefend.io",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "To be eligible for prizes, each participant on a team must also be a registered student at an accredited post-secondary institution in the United States of America or Canada.\r\n\r\nFirst Place: $250 CAD\r\nSecond Place: $150 CAD\r\nThird Place: $100 CAD\r\n\r\n1 month VIP @ LetsDefend.io for all members in the top 3 teams.\r\n\r\nBest 5 Writeups: $40 CAD \r\n(All participants are eligible for writeup prizes.)",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.uoftctf.org/",
+  "public_votable": true
+}

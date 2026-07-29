@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 276568,
+      "name": "ShaastraCTF2024"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2220/",
+  "ctf_id": 1039,
+  "weight": 0.0,
+  "duration": {
+    "hours": 2,
+    "days": 0
+  },
+  "live_feed": "https://ctftime.org/live/2220/",
+  "logo": "https://ctftime.org/media/events/Shaastralogo.png",
+  "id": 2220,
+  "title": "Shaastra CTF '24",
+  "start": "2024-01-04T08:30:00+00:00",
+  "participants": 0,
+  "location": "",
+  "finish": "2024-01-04T10:30:00+00:00",
+  "description": "Shaastra CTF 2024 is a beginner-friendly online jeopardy-style CTF held by IIT Madras, as a part of our annual tech-fest Shaastra. This year we have a Prize Pool of 25k INR.\r\n\r\nThe CTF will start on 4th Jan 2024 at 08:30 (UTC) and end on the same day at 10:30 (UTC).\r\n\r\n--> Max team size is 2\r\n--> The participants must provide a real point of contact for future notifications and to claim their prizes.\r\n--> Disqualification Criteria:\r\n     1. Sharing solutions or hints on the designated discord channel.\r\n     2. Attacking computers or applications not designated by the competition.\r\n     3. Brute force attacks over flag submission.\r\n     4. Other things we consider to be unfair.\r\n     5. In cases of possible inappropriate behaviour, the decision of the admins will be final.\r\n\r\nUnstop registration link for Certificates - https://unstop.com/hackathons/capture-the-flag-shaastra-2024-iit-madras-817046?utm_campaign=site-emails&utm_medium=d2c-automated&utm_source=opportunity-approved\r\n\r\nHere is the Discord to contact admins -https://discord.com/invite/CApe2ZRN7U",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Total Prize Pool of 25k INR for the First Three Teams",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.shaastractf2024.online/",
+  "public_votable": false
+}

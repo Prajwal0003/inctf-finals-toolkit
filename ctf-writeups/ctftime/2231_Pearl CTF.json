@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 151727,
+      "name": "BIT CRIMINALS"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2231/",
+  "ctf_id": 849,
+  "weight": 23.95,
+  "duration": {
+    "hours": 11,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/_croppearl_logo_1_of_1.png",
+  "id": 2231,
+  "title": "Pearl CTF",
+  "start": "2024-03-08T12:00:00+00:00",
+  "participants": 240,
+  "location": "",
+  "finish": "2024-03-09T23:59:59+00:00",
+  "description": "Pearl CTF is being organized by CyberLabs, IIT (ISM) Dhanbad.\r\nThe CTF will consist of challenges from various categories like Web exploitation, Pwn, Forensics, Reverse Engineering, Cryptography,  Blockchain, Game etc.\r\n\r\nChallenges come in a variety of difficulties. There is something for everyone.\r\n\r\nHope you have fun. Happy hacking!\r\n\r\nTimeline:\r\n8th March 17:30 - 10th March 05:30 (IST)\r\n\r\nDuration:\r\n36 hours",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Top 3 Teams Stand to Win:\r\n1st Place - 30000 INR / $ 365\r\n2nd Place - 20000 INR / $ 245\r\n3rd Place - 10000 INR / $ 125\r\n\r\nMeme Competition:\r\nAdditionally, Exciting HTB Coupons await for the Masters of Memes!",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://play.pearlctf.in/",
+  "public_votable": true
+}

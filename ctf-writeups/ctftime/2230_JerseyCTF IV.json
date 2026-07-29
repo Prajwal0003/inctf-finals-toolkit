@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 173925,
+      "name": "Highlander Hackers"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2230/",
+  "ctf_id": 724,
+  "weight": 21.26,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/Asset_39.png",
+  "id": 2230,
+  "title": "JerseyCTF IV",
+  "start": "2024-03-23T16:00:00+00:00",
+  "participants": 87,
+  "location": "",
+  "finish": "2024-03-24T16:00:00+00:00",
+  "description": "Registration is now live!\r\n\r\nhttps://ctf.jerseyctf.com/register\r\n\r\nLocations:\r\n- Online if unable to attend in-person\r\n- In-Person @ NJIT Campus Center Ballroom, Newark, New Jersey\r\n\r\nJerseyCTF is a beginner-friendly Capture the Flag competition that aims to inspire interest in cybersecurity. \r\n\r\nHosted by the NJIT ACM and NICC organizations and the NJIT SCI program, it is geared towards students, beginners, and professionals alike. \r\n\r\nJerseyCTF provides participants with jeopardy-style questions in categories including cryptography, forensics, binary exploitation/reversing, open-source intelligence, and web exploitation.\r\n\r\n<b>Special Thanks to all of our sponsors:</b>\r\nNJCCIC\r\nAWS\r\nGoogle Cloud\r\nCrowdStrike\r\nISACA\r\nMERCK\r\nADP\r\nNJIT YWCC\r\n\r\nHosted by:\r\nNJIT Information & Cybersecurity Club\r\nACM",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Student and Open Division Prizes:\r\n\r\n<b>First Place:</b>\r\n<ul>\r\n<li> First Choice from Prize Pool </li>\r\n<li>$1,000 cash for entire team</li>\r\n</ul>\r\n\r\n<b>Second Place:</b>\r\n<ul>\r\n<li> Second Choice from Prize Pool </li>\r\n<li>$750 cash for entire team</li>\r\n</ul>\r\n\r\n<b>Third Place:</b>\r\n<ul>\r\n<li> Third Choice from Prize Pool </li>\r\n<li>$500 cash for entire team</li>\r\n</ul>\r\n\r\n<b>Prize Pool:</b>\r\n<ul>\r\n<li>CyberSecurity Conference FutureCon Virtual Conference Voucher for each teammate </li>\r\n<li>Choice of 1 CompTIA Certification Basic Bundle (Security+, PenTest+, CySA+, or CASP+) for each teammate</li>\r\n<li>TryHackMe 6-month Subscription for each teammate</li>\r\n</ul>\r\n\r\n<b>US Participants - In Person Only:</b>\r\nFree JerseyCTF IV T-Shirt!",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://ctf.jerseyctf.com/",
+  "public_votable": true
+}

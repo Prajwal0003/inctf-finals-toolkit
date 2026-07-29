@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 4140,
+      "name": "ASIS"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2205/",
+  "ctf_id": 1034,
+  "weight": 24.59,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "https://ctftime.org/live/2205/",
+  "logo": "https://ctftime.org/media/events/MAPNA.jpg",
+  "id": 2205,
+  "title": "Mapna CTF 2024",
+  "start": "2024-01-20T15:00:00+00:00",
+  "participants": 187,
+  "location": "",
+  "finish": "2024-01-21T15:00:00+00:00",
+  "description": "Mapna CTF is a beginner-friendly Capture The Flag event designed to help teams enhance their skills and knowledge. It encompasses various standard categories such as Web, Forensics, Cryptography, Reverse Engineering, and Exploit, along with additional undisclosed categories. If you have inquiries, you can find our contact information at the bottom of each page. However, we kindly request that you review the official rules before reaching out to us via email.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "TBA\r\n\r\n.:: Prize Pool: $1024 ::.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://mapnactf.com/",
+  "public_votable": true
+}

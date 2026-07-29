@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 278003,
+      "name": "atHACKprivate"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2228/",
+  "ctf_id": 1061,
+  "weight": 0.0,
+  "duration": {
+    "hours": 9,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/_hacklogo_v2_720.png",
+  "id": 2228,
+  "title": "@Hack 2024",
+  "start": "2024-03-02T08:00:00+00:00",
+  "participants": 21,
+  "location": "Canada, Montreal, Concordia University, Sir George William Campus",
+  "finish": "2024-03-03T17:00:00+00:00",
+  "description": "@Hack (\u201cAt Hack\u201d) is a national cybersecurity student hackathon hosted at Concordia University by TECHNATION\u2019s Career Ready Program and Hexploit Alliance. This two-day event brings together cybersecurity enthusiasts from across Canada to the heart of Montr\u00e9al at Concordia\u2019s downtown campus for a weekend filled with unique cybersecurity challenges.\r\n\r\nChallenges: https://github.com/athack-ctf/AtHackCTF-2024-Challenges",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Team 1: $2,000 per person\r\nTeam 2: $1,250 per person\r\nTeam 3: $750 per person",
+  "format_id": 1,
+  "onsite": true,
+  "restrictions": "Open",
+  "url": "https://2024.athackctf.com/",
+  "public_votable": false
+}

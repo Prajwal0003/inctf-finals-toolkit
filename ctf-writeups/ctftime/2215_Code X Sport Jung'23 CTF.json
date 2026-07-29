@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 216139,
+      "name": "Hackipy"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2215/",
+  "ctf_id": 1045,
+  "weight": 0.0,
+  "duration": {
+    "hours": 3,
+    "days": 0
+  },
+  "live_feed": "https://ctftime.org/live/2215/",
+  "logo": "https://ctftime.org/media/events/event_logo.jpeg",
+  "id": 2215,
+  "title": "Code X Sport Jung'23 CTF",
+  "start": "2023-12-23T05:30:00+00:00",
+  "participants": 0,
+  "location": "Karachi, Pakistan",
+  "finish": "2023-12-23T08:30:00+00:00",
+  "description": "The inaugural Code X Sport Jung'23 CTF at KIET NNAZ Campus on December 23, 2023, was an exhilarating success, bringing together cybersecurity enthusiasts for a day of intense competition and skill demonstration. As the campus played host to this Jeopardy-style Capture The Flag event for the first time, students from KIET's main campus showcased their passion and commitment to cybersecurity excellence. A heartfelt thank you to all the participants, organizers, and volunteers who contributed to the event's success. The vibrant atmosphere and enthusiastic engagement promise an exciting future for cybersecurity events at KIET. Stay tuned for updates on upcoming events as we continue to foster a community of cybersecurity enthusiasts.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "",
+  "format_id": 1,
+  "onsite": true,
+  "restrictions": "Open",
+  "url": "http://kiet-intra-ctf.site/",
+  "public_votable": false
+}

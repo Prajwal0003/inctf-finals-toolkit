@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 273673,
+      "name": "EN\u00a2R\u00a5PT_EDGE\u20ac"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2233/",
+  "ctf_id": 1050,
+  "weight": 0.0,
+  "duration": {
+    "hours": 21,
+    "days": 0
+  },
+  "live_feed": "https://ctftime.org/live/2233/",
+  "logo": "",
+  "id": 2233,
+  "title": "RCS CTF 24",
+  "start": "2024-01-26T11:30:00+00:00",
+  "participants": 7,
+  "location": "LPU, Jalandhar, Punjab, India",
+  "finish": "2024-01-27T08:30:00+00:00",
+  "description": "RCSCTF24 aims to bring together cybersecurity enthusiasts, professionals, and students for an immersive 24-hour offline competition. The event serves as a platform for knowledge exchange, skill development, and fostering collaboration within the cybersecurity community.",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "- Event goodies worth 1 lakhs (INR)\r\n- Exam Vouchers  for winners\r\n- Participation Certificates for all",
+  "format_id": 1,
+  "onsite": true,
+  "restrictions": "Open",
+  "url": "https://play.encryptedge.in/",
+  "public_votable": false
+}

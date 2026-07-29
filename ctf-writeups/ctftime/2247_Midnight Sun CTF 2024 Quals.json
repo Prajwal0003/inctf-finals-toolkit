@@ -1,0 +1,32 @@
+{
+  "organizers": [
+    {
+      "id": 3208,
+      "name": "HackingForSoju"
+    }
+  ],
+  "ctftime_url": "https://ctftime.org/event/2247/",
+  "ctf_id": 246,
+  "weight": 35.74,
+  "duration": {
+    "hours": 0,
+    "days": 1
+  },
+  "live_feed": "",
+  "logo": "https://ctftime.org/media/events/matrix.png",
+  "id": 2247,
+  "title": "Midnight Sun CTF 2024 Quals",
+  "start": "2024-04-20T10:00:00+00:00",
+  "participants": 96,
+  "location": "",
+  "finish": "2024-04-21T10:00:00+00:00",
+  "description": "Midnight Sun CTF is HackingForSoju's annual CTF event open to players around the world.\r\n\r\nThis qualifier event will allow 10 teams qualify for the on-site event in Stockholm Sweden in June.\r\n\r\nhttps://discord.gg/xMuRxub4CX",
+  "format": "Jeopardy",
+  "is_votable_now": false,
+  "prizes": "Prizes include flights, hotels, swag etc. for the on-site finals as well as tickets to the conference and access to the after party.",
+  "format_id": 1,
+  "onsite": false,
+  "restrictions": "Open",
+  "url": "https://midnightsunctf.com/",
+  "public_votable": true
+}
