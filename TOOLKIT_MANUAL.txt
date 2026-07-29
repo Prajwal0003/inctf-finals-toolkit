@@ -121,7 +121,27 @@ Path: ~/ctf-scripts/reference/
 
 
 --------------------------------------------------------------------------------
-6. ZERO FALSE-POSITIVE AUTOPILOT (NEW!)
+6. REVERSE ENGINEERING (NEW!)
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/reverse/
+
+* rev_cracker.py
+  What it does: Uses `ltrace` to dynamically run the binary and spy on library 
+  functions (like strcmp). If the binary compares your input against the 
+  hardcoded flag in memory, this script will catch it instantly!
+  Usage: python3 rev_cracker.py <binary>
+  Example: python3 rev_cracker.py ./crackme
+
+* angr_template.py
+  What it does: When simple reversing fails (e.g., character-by-character math 
+  checks), this uses Symbolic Execution to mathematically solve for the flag.
+  Usage: Edit the script to set the SUCCESS_ADDRESS and FAIL_ADDRESS (found 
+  via Ghidra/GDB), then run it.
+  Example: python3 angr_template.py ./hard_crackme
+
+
+--------------------------------------------------------------------------------
+7. ZERO FALSE-POSITIVE AUTOPILOT
 --------------------------------------------------------------------------------
 Path: ~/ctf-scripts/
 
@@ -138,7 +158,7 @@ Path: ~/ctf-scripts/
 
 
 --------------------------------------------------------------------------------
-7. MISCELLANEOUS
+8. MISCELLANEOUS
 --------------------------------------------------------------------------------
 Path: ~/ctf-scripts/misc/
 
@@ -158,7 +178,7 @@ Path: ~/ctf-scripts/misc/
 
 
 --------------------------------------------------------------------------------
-8. ZSH ALIASES (QUICK COMMANDS)
+9. ZSH ALIASES (QUICK COMMANDS)
 --------------------------------------------------------------------------------
 You can type these directly into the terminal anywhere:
 
