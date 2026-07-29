@@ -1,0 +1,155 @@
+================================================================================
+                    InCTF 2026 Finals — TOOLKIT MANUAL
+                    TEAM: TEAM_UNFINDABLES (FIN-030)
+================================================================================
+
+This manual explains how to use every custom tool in your toolkit. All tools are 
+100% offline, AI-free, and compliant with InCTF rules. 
+
+You can read this file during the competition.
+
+--------------------------------------------------------------------------------
+1. PWN & BINARY EXPLOITATION
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/pwn/
+
+* binary_analyzer.py
+  What it does: Auto-runs checksec, strings, file type, and looks for dangerous 
+  functions to suggest an exploit strategy.
+  Usage: python3 binary_analyzer.py <path_to_binary>
+  Example: python3 binary_analyzer.py ./vuln_server
+
+* rop_finder.py
+  What it does: Automatically searches a binary for useful ROP gadgets, libc 
+  offsets, and common exploit symbols (like system, /bin/sh).
+  Usage: python3 rop_finder.py <path_to_binary> [path_to_libc]
+  Example: python3 rop_finder.py ./vuln_server ./libc.so.6
+
+* shellcode_gen.py
+  What it does: Generates common shellcode payloads (execve, read flag, etc.) 
+  and formats them for Python, C, or Raw Hex.
+  Usage: python3 shellcode_gen.py [arch] [type]
+  Example: python3 shellcode_gen.py amd64 execve
+  Options: 'list' to see available shellcodes
+
+* exploit_template.py
+  What it does: A pre-written pwntools script with built-in remote/local switching.
+  Usage: Copy to your challenge folder and edit. 
+  Example: cp ~/ctf-scripts/pwn/exploit_template.py ./solve.py
+
+
+--------------------------------------------------------------------------------
+2. CRYPTOGRAPHY
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/crypto/
+
+* rsa_toolkit.py
+  What it does: A multi-attack RSA solver (Fermat, Wiener, Hastad, Common Modulus).
+  Usage: Open python/ipython and import it, or edit the file.
+  Example (in python):
+    from rsa_toolkit import auto_solve
+    auto_solve(n=12345..., e=65537, c=98765...)
+
+* aes_oracle.py
+  What it does: Automates AES CBC Padding Oracle attacks.
+  Usage: Edit the file to define your specific HTTP or Netcat oracle, then run it.
+  Example: Modify the `http_oracle` function to match the challenge URL.
+
+* hash_crack.py
+  What it does: Identifies hash types and brute-forces/wordlist cracks them.
+  Usage: python3 hash_crack.py <hash> [wordlist_path]
+  Example: python3 hash_crack.py 5d41402abc4b2a76b9719d911017c592 ~/wordlists/rockyou.txt
+
+
+--------------------------------------------------------------------------------
+3. WEB EXPLOITATION
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/web/
+
+* sqli_helper.py
+  What it does: Automates finding UNION columns and extracting data blindly.
+  Usage: Import into a python script and use the functions.
+  Example: 
+    from sqli_helper import sqli_union_detect
+    sqli_union_detect("http://target.com/page", param="id")
+
+* jwt_toolkit.py
+  What it does: Decodes JWTs, performs the alg:none attack, and cracks HMAC secrets.
+  Usage: python3 jwt_toolkit.py <token>
+  Example: python3 jwt_toolkit.py eyJhbGciOi...
+
+* ssti_payloads.txt
+  What it does: A massive list of Server-Side Template Injection payloads.
+  Usage: Read the text file and copy/paste payloads based on the engine.
+
+
+--------------------------------------------------------------------------------
+4. FORENSICS
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/forensics/
+
+* stego_solver.py
+  What it does: Auto-analyzes images/files using exiftool, binwalk, zsteg, and steghide.
+  Usage: python3 stego_solver.py <path_to_file>
+  Example: python3 stego_solver.py suspicious.png
+
+* pcap_parser.py
+  What it does: Analyzes Wireshark PCAP files to extract HTTP objects, passwords, 
+  and flag-like strings automatically.
+  Usage: python3 pcap_parser.py <path_to_pcap>
+  Example: python3 pcap_parser.py capture.pcap
+
+
+--------------------------------------------------------------------------------
+5. OFFLINE WRITEUP SEARCH & ADVISOR (THE MOST POWERFUL TOOLS)
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/reference/
+
+* writeup_search.py
+  What it does: Searches through thousands of pre-downloaded public CTF writeups offline.
+  Usage: python3 writeup_search.py [keywords]
+  Example 1: python3 writeup_search.py "padding oracle attack"
+  Example 2: python3 writeup_search.py -c crypto "rsa small e"
+  Example 3: python3 writeup_search.py -f "tcache poisoning glibc 2.35"
+  Note: Make sure your pendrive writeups are copied to ~/ctf-writeups/
+
+* challenge_advisor.py
+  What it does: You describe a challenge, and it tells you the exact technique 
+  and tool to use based on CTF patterns.
+  Usage: python3 challenge_advisor.py "description of the challenge"
+  Example: python3 challenge_advisor.py "buffer overflow but canary is enabled"
+
+
+--------------------------------------------------------------------------------
+6. MISCELLANEOUS
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/misc/
+
+* decoder.py
+  What it does: Paste any garbage text, and it recursively tries Base64, Hex, URL, 
+  Binary, ROT13, etc., to find hidden readable text.
+  Usage: python3 decoder.py "encoded_string"
+  Example: python3 decoder.py "aW5jdGZ7ZmxhZ30="
+
+* flag_submitter.py
+  What it does: Auto-submits flags to the CTF platform and keeps a local solved list.
+  Usage: Edit the script with your Team Token, then run:
+  Example: python3 flag_submitter.py "inctf{this_is_the_flag}" challenge_name
+
+* solve_stub.py
+  What it does: A blank template for starting any challenge.
+
+
+--------------------------------------------------------------------------------
+7. ZSH ALIASES (QUICK COMMANDS)
+--------------------------------------------------------------------------------
+You can type these directly into the terminal anywhere:
+
+* newchal <name>  -> Creates a folder in ~/ctf/challenges and puts a solve.py in it.
+* rot13 <text>    -> Instantly ROT13 decodes text.
+* hexdump <file>  -> Runs xxd.
+* findflag        -> Recursively searches all files in the current folder for 'inctf{'.
+* b64e / b64d     -> Quick base64 encode/decode.
+
+
+Good luck, TEAM_UNFINDABLES!
