@@ -139,6 +139,14 @@ Path: ~/ctf-scripts/reverse/
   via Ghidra/GDB), then run it.
   Example: python3 angr_template.py ./hard_crackme
 
+* ghidra_decompile.py
+  What it does: Ghidra's GUI can take a long time to open. This script runs 
+  Ghidra in "headless" mode and automatically extracts all the C pseudo-code 
+  of a binary into a `.c` text file instantly. You can then search it with `grep`.
+  Usage: python3 ghidra_decompile.py <binary>
+  Example: python3 ghidra_decompile.py ./crackme 
+  Output: ./crackme.c
+
 
 --------------------------------------------------------------------------------
 7. ZERO FALSE-POSITIVE AUTOPILOT
