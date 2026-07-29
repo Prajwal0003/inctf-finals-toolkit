@@ -121,7 +121,24 @@ Path: ~/ctf-scripts/reference/
 
 
 --------------------------------------------------------------------------------
-6. MISCELLANEOUS
+6. ZERO FALSE-POSITIVE AUTOPILOT (NEW!)
+--------------------------------------------------------------------------------
+Path: ~/ctf-scripts/
+
+* ctf_autopilot.py
+  What it does: This is an automated "Magic Solver". Give it any file or folder, 
+  and it automatically tries to solve it without false positives.
+  - Automatically parses text files for RSA variables (n,e,c) and solves them.
+  - Recursively runs binwalk to extract hidden files and searches for the flag.
+  - Automatically decodes base64 strings and searches for the flag.
+  - Parses PCAP files and extracts HTTP objects to scan for the flag.
+  - ONLY triggers if it finds a deterministic flag format matching inctf{...}.
+  Usage: python3 ctf_autopilot.py <file_or_directory>
+  Example: python3 ctf_autopilot.py ./challenges/
+
+
+--------------------------------------------------------------------------------
+7. MISCELLANEOUS
 --------------------------------------------------------------------------------
 Path: ~/ctf-scripts/misc/
 
@@ -141,7 +158,7 @@ Path: ~/ctf-scripts/misc/
 
 
 --------------------------------------------------------------------------------
-7. ZSH ALIASES (QUICK COMMANDS)
+8. ZSH ALIASES (QUICK COMMANDS)
 --------------------------------------------------------------------------------
 You can type these directly into the terminal anywhere:
 
