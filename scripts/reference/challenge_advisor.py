@@ -59,7 +59,7 @@ STRATEGIES = {
         "detect": ["heap", "malloc", "free", "tcache", "chunk", "uaf", "double free", "fastbin"],
         "strategy": [
             "1. Identify heap primitive (UAF, double free, overflow)",
-            "2. tcache poisoning: overwrite fd → allocate anywhere",
+            "2. tcache poisoning: overwrite fd -> allocate anywhere",
             "3. Overwrite __free_hook or __malloc_hook with system",
             "4. Or: House of Force / House of Orange for older glibc",
         ],
@@ -76,7 +76,7 @@ STRATEGIES = {
             "4. Run rsa_toolkit.py auto_solve(n, e, c)",
         ],
         "tools": ["rsa_toolkit.py", "SageMath", "gmpy2"],
-        "template": "rsa_toolkit.py → auto_solve()",
+        "template": "rsa_toolkit.py -> auto_solve()",
     },
     ("crypto", "RSA - special"): {
         "detect": ["wiener", "small d", "large e", "coppersmith", "partial"],
@@ -94,7 +94,7 @@ STRATEGIES = {
         "strategy": [
             "ECB: detect identical blocks, cut-paste attack",
             "CBC: bit-flipping (XOR prev block), padding oracle",
-            "CTR: nonce reuse → XOR known plaintext",
+            "CTR: nonce reuse -> XOR known plaintext",
             "Padding oracle → aes_oracle.py",
         ],
         "tools": ["aes_oracle.py", "pycryptodome"],
@@ -115,7 +115,7 @@ STRATEGIES = {
     ("web", "SSTI"): {
         "detect": ["template", "ssti", "render", "jinja", "flask", "twig"],
         "strategy": [
-            "1. Detect: {{7*7}} → 49?",
+            "1. Detect: {{7*7}} -> 49?",
             "2. Identify engine (Jinja2, Twig, etc.)",
             "3. RCE payload from ssti_payloads.txt",
             "Jinja2: {{config.__class__.__init__.__globals__['os'].popen('id').read()}}",
@@ -129,7 +129,7 @@ STRATEGIES = {
             "1. Decode: jwt_toolkit.py <token>",
             "2. Try alg:none attack",
             "3. Crack weak HMAC secret",
-            "4. Check for key confusion (RS256→HS256)",
+            "4. Check for key confusion (RS256->HS256)",
         ],
         "tools": ["jwt_toolkit.py"],
         "template": "jwt_toolkit.py",
@@ -164,7 +164,7 @@ STRATEGIES = {
             "1. vol windows.info (identify OS)",
             "2. vol windows.pslist (processes)",
             "3. vol windows.cmdline (commands run)",
-            "4. vol windows.filescan → dumpfiles",
+            "4. vol windows.filescan -> dumpfiles",
             "5. vol windows.hashdump (password hashes)",
         ],
         "tools": ["volatility3"],
@@ -204,15 +204,15 @@ def advise(description):
         return
 
     for i, (score, cat, name, info) in enumerate(matches[:3]):
-        print(f"\n{B}{G}{'─'*50}{N}")
+        print(f"\n{B}{G}{'-'*50}{N}")
         print(f"  {B}Match #{i+1}: {Y}[{cat}]{N} {B}{name}{N} (score: {score})")
-        print(f"{B}{G}{'─'*50}{N}")
+        print(f"{B}{G}{'-'*50}{N}")
         print(f"\n  {B}Strategy:{N}")
         for step in info["strategy"]:
-            print(f"    {C}→{N} {step}")
+            print(f"    {C}->{N} {step}")
         print(f"\n  {B}Tools:{N}")
         for tool in info["tools"]:
-            print(f"    {M}•{N} {tool}")
+            print(f"    {M}-{N} {tool}")
         print(f"\n  {B}Quick start:{N} {G}{info['template']}{N}")
 
     print()

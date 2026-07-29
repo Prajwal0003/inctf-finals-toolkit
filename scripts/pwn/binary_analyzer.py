@@ -98,25 +98,25 @@ def analyze(binary):
     # Strategy suggestion
     print(f"\n{B}[Suggested Strategy]{N}")
     if 'gets' in found_vuln or 'strcpy' in found_vuln:
-        print(f"  {G}→ Buffer Overflow detected{N}")
+        print(f"  {G}-> Buffer Overflow detected{N}")
         if not nx:
-            print(f"    {C}NX disabled → shellcode injection{N}")
+            print(f"    {C}NX disabled -> shellcode injection{N}")
             print(f"    Use: shellcode_gen.py {arch} execve")
         elif not canary and not pie:
-            print(f"    {C}No canary + No PIE → direct ROP chain{N}")
+            print(f"    {C}No canary + No PIE -> direct ROP chain{N}")
             print(f"    Use: rop_finder.py {binary}")
         elif not canary and pie:
-            print(f"    {C}PIE enabled → leak PIE base first, then ROP{N}")
+            print(f"    {C}PIE enabled -> leak PIE base first, then ROP{N}")
         elif canary:
-            print(f"    {C}Canary → leak canary (format string? info leak?), then overflow{N}")
+            print(f"    {C}Canary -> leak canary (format string? info leak?), then overflow{N}")
     
     if 'printf' in found_vuln:
-        print(f"  {G}→ Format String possible{N}")
+        print(f"  {G}-> Format String possible{N}")
         print(f"    {C}Test with: %p.%p.%p.%p.%p{N}")
         print(f"    {C}Use: pwntools fmtstr_payload(){N}")
 
     if any(f in found_vuln for f in ['malloc', 'free', 'calloc', 'realloc']):
-        print(f"  {G}→ Heap challenge possible{N}")
+        print(f"  {G}-> Heap challenge possible{N}")
         print(f"    {C}Check for UAF, double free, heap overflow{N}")
 
     if not found_vuln:
