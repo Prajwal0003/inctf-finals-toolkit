@@ -1,0 +1,30 @@
+# ============================================
+# InCTF 2026 Finals — AUR Packages
+# TEAM_UNFINDABLES (FIN-030)
+# ============================================
+
+# --- Pwn ---
+pwndbg
+# gef (alternative GDB plugin — uncomment if preferred)
+ropgadget
+one_gadget
+seccomp-tools
+
+# --- Web ---
+ffuf
+gobuster
+feroxbuster
+
+# --- Forensics ---
+volatility3
+steghide
+zsteg
+
+# --- Crypto ---
+sagemath
+
+# --- Reverse Engineering ---
+iaito
+
+# --- Misc ---
+checksec

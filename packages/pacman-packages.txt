@@ -1,0 +1,99 @@
+# ============================================
+# InCTF 2026 Finals — Pacman Packages
+# TEAM_UNFINDABLES (FIN-030)
+# Arch Linux 2026.02.01
+# ============================================
+
+# --- Core Utilities ---
+base-devel
+git
+wget
+curl
+unzip
+p7zip
+jq
+tree
+fd
+ripgrep
+bat
+htop
+lsof
+net-tools
+inetutils
+
+# --- Editors ---
+vim
+neovim
+
+# --- Shell & Terminal ---
+zsh
+tmux
+screen
+
+# --- Networking ---
+nmap
+tcpdump
+wireshark-cli
+socat
+openbsd-netcat
+openssh
+proxychains-ng
+iptables-nft
+
+# --- Binary / Pwn ---
+gdb
+ltrace
+strace
+binutils
+elfutils
+nasm
+python-capstone
+radare2
+
+# --- Reverse Engineering ---
+binwalk
+ghidra
+
+# --- Web ---
+sqlmap
+httpie
+
+# --- Forensics ---
+foremost
+exiftool
+scalpel
+sleuthkit
+
+# --- Crypto ---
+openssl
+gnupg
+
+# --- Python ---
+python
+python-pip
+python-virtualenv
+python-setuptools
+ipython
+python-numpy
+python-sympy
+python-requests
+python-pillow
+python-cryptography
+python-pycryptodome
+
+# --- Containers ---
+docker
+docker-compose
+
+# --- Misc ---
+file
+xxd
+hexedit
+dos2unix
+bc
+ruby
+perl
+go
+rustup
+nodejs
+npm

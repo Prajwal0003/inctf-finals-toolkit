@@ -1,0 +1,39 @@
+# ============================================
+# InCTF 2026 Finals — Python Packages
+# TEAM_UNFINDABLES (FIN-030)
+# ============================================
+
+# --- Pwn ---
+pwntools
+ropper
+angr
+unicorn
+
+# --- Crypto ---
+pycryptodome
+gmpy2
+z3-solver
+sympy
+ecdsa
+fastecdsa
+primefac
+
+# --- Web ---
+beautifulsoup4
+lxml
+flask
+requests
+urllib3
+python-jwt
+PyJWT
+
+# --- Forensics ---
+python-magic
+olefile
+
+# --- Misc ---
+ipython
+pyyaml
+rich
+colorama
+tqdm
