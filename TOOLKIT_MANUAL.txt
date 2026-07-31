@@ -186,6 +186,38 @@ Path: ~/ctf-scripts/misc/
 
 
 --------------------------------------------------------------------------------
+8. TEAMMATE'S ADVANCED FORENSICS & RE TOOLS
+--------------------------------------------------------------------------------
+Path: Pre-installed on your system by the installer!
+
+* Offline CyberChef
+  What it does: The ultimate data swiss-army knife. Decode base64, hex, XOR, etc.
+  Usage: Open `~/ctf-scripts/CyberChef.html` in a web browser. It works 100% offline.
+
+* AperiSolve (Docker)
+  What it does: All-in-one steganography web interface (runs binwalk, zsteg, steghide).
+  Usage: Run `docker run -p 8000:80 zeecka/aperisolve` and open `localhost:8000` in browser.
+
+* Volatility 3 (Memory Forensics)
+  What it does: Extracts passwords, processes, and files from a RAM dump (.raw/.vmem).
+  Usage: `vol -f memory.dump windows.info` or `vol -f memory.dump windows.hashdump`
+
+* Wireshark & TShark (Network)
+  What it does: Analyzes packet captures.
+  Usage: Open `wireshark` GUI or use `tshark` in the terminal for quick object extraction.
+
+* SearchSploit / ExploitDB
+  What it does: Offline database of thousands of CVE exploits. Perfect if you find a 
+  vulnerable CMS or kernel version.
+  Usage: `searchsploit <software_name>` -> Example: `searchsploit wordpress 5.0`
+
+* Capa & FLOSS
+  What it does: Malware triage. `floss` extracts obfuscated strings (better than regular `strings`).
+  `capa` tells you what a binary is capable of (e.g., "Contains anti-debugging", "Reads files").
+  Usage: `floss ./binary` or `capa ./binary`
+
+
+--------------------------------------------------------------------------------
 9. ZSH ALIASES (QUICK COMMANDS)
 --------------------------------------------------------------------------------
 You can type these directly into the terminal anywhere:

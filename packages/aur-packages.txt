@@ -42,3 +42,4 @@ hayabusa-bin
 bkcrack
 seclists
 detectiteasy-bin
+exploitdb
