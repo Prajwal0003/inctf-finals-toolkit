@@ -97,3 +97,21 @@ go
 rustup
 nodejs
 npm
+
+# --- Teammate Additions (Forensics, Net, Stego, Triage) ---
+testdisk
+wireshark-qt
+suricata
+libpcap
+python-scapy
+ngrep
+pngcheck
+jpeginfo
+imagemagick
+ffmpeg
+audacity
+sonic-visualiser
+john
+hashcat
+cutter
+yara

@@ -141,6 +141,18 @@ cp -r "${SCRIPTS_DIR}/"* "$DEPLOY_DIR/" 2>/dev/null || warn "No scripts to deplo
 chown -R "$REAL_USER:$REAL_USER" "$DEPLOY_DIR"
 chmod -R +x "$DEPLOY_DIR"
 
+# Download Offline CyberChef
+CYBERCHEF_URL="https://github.com/gchq/CyberChef/releases/download/v10.18.9/CyberChef_v10.18.9.zip"
+if [[ ! -f "${DEPLOY_DIR}/CyberChef.html" ]]; then
+    log "Downloading Offline CyberChef..."
+    sudo -u "$REAL_USER" wget -q -O "${DEPLOY_DIR}/CyberChef.zip" "$CYBERCHEF_URL" || warn "CyberChef download failed"
+    if [[ -f "${DEPLOY_DIR}/CyberChef.zip" ]]; then
+        sudo -u "$REAL_USER" unzip -q "${DEPLOY_DIR}/CyberChef.zip" -d "${DEPLOY_DIR}/" || warn "CyberChef unzip failed"
+        mv "${DEPLOY_DIR}/"CyberChef_*.html "${DEPLOY_DIR}/CyberChef.html" 2>/dev/null || true
+        rm "${DEPLOY_DIR}/CyberChef.zip" 2>/dev/null || true
+    fi
+fi
+
 # Add scripts to PATH
 PROFILE_LINE='export PATH="$HOME/ctf-scripts:$HOME/ctf-scripts/pwn:$HOME/ctf-scripts/crypto:$HOME/ctf-scripts/web:$HOME/ctf-scripts/forensics:$HOME/ctf-scripts/misc:$HOME/ctf-scripts/recon:$PATH"'
 if ! grep -q "ctf-scripts" "${REAL_HOME}/.bashrc" 2>/dev/null; then
@@ -177,6 +189,10 @@ log "Enabling Docker service..."
 systemctl enable docker 2>/dev/null || true
 systemctl start docker 2>/dev/null || true
 usermod -aG docker "$REAL_USER" 2>/dev/null || true
+
+# Pull AperiSolve image (as requested by teammate)
+log "Pulling AperiSolve Docker image..."
+docker pull zeecka/aperisolve 2>&1 | tee -a "$LOG_FILE" || warn "AperiSolve pull failed"
 
 # ============================================
 section "Installation Complete!"

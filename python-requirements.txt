@@ -37,3 +37,8 @@ pyyaml
 rich
 colorama
 tqdm
+
+# --- Teammate Additions ---
+capa
+flare-floss
+stegoveritas

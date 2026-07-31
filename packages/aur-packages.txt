@@ -28,3 +28,17 @@ iaito
 
 # --- Misc ---
 checksec
+
+# --- Teammate Additions (Forensics, Net, Stego, Triage) ---
+bulk-extractor
+autopsy
+memprocfs
+zeek
+networkminer
+stegseek
+outguess
+chainsaw
+hayabusa-bin
+bkcrack
+seclists
+detectiteasy-bin
