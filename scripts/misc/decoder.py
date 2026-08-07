@@ -24,7 +24,7 @@ def try_decode(data, depth=0, max_depth=10):
     # Check for flag
     flag = re.search(r'(inctf\{[^}]+\}|flag\{[^}]+\}|CTF\{[^}]+\})', data, re.I)
     if flag:
-        print(f"{prefix}{G}{B}🏴 FLAG FOUND: {flag.group()}{N}")
+        print(f"{prefix}{G}{B}[***] FLAG FOUND: {flag.group()}{N}")
 
     # Base64
     if re.match(r'^[A-Za-z0-9+/]+=*$', data) and len(data) >= 4 and len(data) % 4 <= 2:

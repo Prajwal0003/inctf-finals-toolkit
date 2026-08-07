@@ -54,12 +54,12 @@ def submit_flag(flag, challenge_name="unknown"):
         if r.status_code == 200:
             result = r.json()
             if result.get("status") == "correct" or result.get("success"):
-                print(f"[+] ✅ CORRECT! {challenge_name} solved!")
+                print(f"[+] CORRECT! {challenge_name} solved!")
                 solved[challenge_name] = flag
                 save_solved(solved)
                 return True
             else:
-                print(f"[-] ❌ Incorrect: {result}")
+                print(f"[-] INCORRECT: {result}")
                 return False
         else:
             print(f"[-] HTTP {r.status_code}: {r.text}")

