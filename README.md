@@ -6,7 +6,10 @@
 
 ---
 
-## OverviewI built this toolkit while preparing for InCTF 2026, but did not use it in the finals. It includes scripts, configurations, and dependencies for offline CTF practice. Everything here runs **entirely offline** — no internet required during the CTF.
+## Overview
+
+I built this toolkit while preparing for InCTF 2026, but did not use it in the finals. It includes scripts, configurations, and dependencies for offline CTF practice. Everything here runs **entirely offline** — no internet required during a CTF.
+
 
 ## Quick Install
 
