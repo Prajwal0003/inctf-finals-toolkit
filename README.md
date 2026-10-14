@@ -1,4 +1,4 @@
-# 🏴 InCTF 2026 Finals — Custom Tools/Scripts Request
+# Offline CTF Toolkit for Arch Linux
 
 **Team:** TEAM_UNFINDABLES  
 **Team ID:** FIN-030  
@@ -6,9 +6,7 @@
 
 ---
 
-## Overview
-
-This repository contains all custom tools, scripts, configurations, and dependencies requested for pre-installation on our competition machines. Everything here runs **entirely offline** — no internet required during the CTF.
+## OverviewI built this toolkit while preparing for InCTF 2026, but did not use it in the finals. It includes scripts, configurations, and dependencies for offline CTF practice. Everything here runs **entirely offline** — no internet required during the CTF.
 
 ## Quick Install
 
