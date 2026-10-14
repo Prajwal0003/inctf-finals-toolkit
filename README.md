@@ -13,7 +13,7 @@ This repository contains all custom tools, scripts, configurations, and dependen
 ## Quick Install
 
 ```bash
-git clone https://github.com/<your-username>/inctf-finals-toolkit.git
+git clone https://github.com/Prajwal0003/inctf-finals-toolkit.git
 cd inctf-finals-toolkit
 chmod +x install.sh
 sudo ./install.sh
